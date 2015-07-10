@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>897B43AB-4ECC-4007-BE16-21367B51E1F0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MYLC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B21A601E1A9BC8D2FC57E848C52F99145476039E</key>
+		<string>github.com:lwwhb/MyCocos2dxGame.git</string>
+		<key>CD76C1E5581969944E0D5DA61C8125268B52FA22</key>
+		<string>github.com:lwwhb/GameJam.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>IndieACEGameJam2015/MYLC/proj.ios_mac/MYLC.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B21A601E1A9BC8D2FC57E848C52F99145476039E</key>
+		<string>../../../../../../MyCocos2dxGame</string>
+		<key>CD76C1E5581969944E0D5DA61C8125268B52FA22</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:lwwhb/GameJam.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CD76C1E5581969944E0D5DA61C8125268B52FA22</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CD76C1E5581969944E0D5DA61C8125268B52FA22</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GameJam</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B21A601E1A9BC8D2FC57E848C52F99145476039E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MyCocos2dxGame</string>
+		</dict>
+	</array>
+</dict>
+</plist>
