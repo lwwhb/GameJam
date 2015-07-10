@@ -1,3 +1,6 @@
+.DS_Store
+
+
 # Compiled Object files
 *.slo
 *.lo
@@ -6,7 +9,7 @@
 
 # Precompiled Headers
 *.gch
-*.pch
+#*.pch
 
 # Compiled Dynamic libraries
 *.so
