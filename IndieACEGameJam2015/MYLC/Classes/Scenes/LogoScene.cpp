@@ -9,8 +9,8 @@
 #include "LogoScene.h"
 #include "GroundLayer.h"
 #include "MenuScene.h"
-#include "LevelSelectScene.h"
-#include "MainScene.h"
+
+
 USING_NS_CC;
 
 Scene* LogoScene::createScene()
@@ -97,11 +97,8 @@ bool LogoScene::init()
     addChild(dateMarkSprite);
     
     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LogoScene::rowOneEnd, this));
-    auto rowOneMoveAction = MoveTo::create(0.7, Vec2(0,size.height*0.7));
+    auto rowOneMoveAction = MoveTo::create(0.4, Vec2(0,size.height*0.7));
     rowOne->runAction(Sequence::create(rowOneMoveAction,callFunc, NULL));
-
-    
-
     
     return true;
 }
@@ -109,7 +106,7 @@ bool LogoScene::init()
 void LogoScene::rowOneEnd()
 {
     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LogoScene::rowTwoEnd, this));
-    auto rowTwoMoveAction = MoveTo::create(0.7, Vec2(0,size.height*0.3));
+    auto rowTwoMoveAction = MoveTo::create(0.4, Vec2(0,size.height*0.3));
     if (rowTwo) {
         rowTwo->runAction(Sequence::create(rowTwoMoveAction,callFunc, NULL));
     }
@@ -119,7 +116,7 @@ void LogoScene::rowTwoEnd()
 {
 
     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LogoScene::colOneEnd, this));
-    auto colOneMoveAction = MoveTo::create(0.7, Vec2(size.width*0.3,0));
+    auto colOneMoveAction = MoveTo::create(0.4, Vec2(size.width*0.3,0));
     if (colOne) {
         colOne->runAction(Sequence::create(colOneMoveAction,callFunc, NULL));
     }
@@ -128,7 +125,7 @@ void LogoScene::rowTwoEnd()
 void LogoScene::colOneEnd()
 {
     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LogoScene::colTwoEnd, this));
-    auto colTwoMoveAction = MoveTo::create(0.7, Vec2(size.width * 0.6,0));
+    auto colTwoMoveAction = MoveTo::create(0.4, Vec2(size.width * 0.6,0));
     if (colTwo) {
          colTwo->runAction(Sequence::create(colTwoMoveAction,callFunc, NULL));
     }
@@ -162,7 +159,7 @@ void LogoScene::precache()
     {
         CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LogoScene::endcache, this));
         auto tinyFlareFadeInAction = FadeIn::create(2);
-        auto tinyFlareMoveAction = MoveBy::create(0.7, Vec2(0, 50));
+        auto tinyFlareMoveAction = MoveBy::create(0.5, Vec2(0, 50));
         if (tinyFlareSprite) {
             tinyFlareSprite->runAction(Sequence::create(tinyFlareFadeInAction,tinyFlareMoveAction,callFunc,NULL));
 
@@ -175,7 +172,7 @@ void LogoScene::endcache()
 {
     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LogoScene::logoActon, this));
     auto gamejamFadeInAction = FadeIn::create(2);
-    auto gamejamMoveAction = MoveBy::create(0.6, Vec2(0,-50));
+    auto gamejamMoveAction = MoveBy::create(0.5, Vec2(0,-50));
     if (gamejamMarkSprite) {
         gamejamMarkSprite->runAction(Sequence::create(gamejamFadeInAction,gamejamMoveAction,callFunc, NULL));
     }
@@ -195,6 +192,6 @@ void LogoScene::logoActon()
 
 void LogoScene::nextScene()
 {
-    auto scene = LevelSelectScene::createScene();
+    auto scene = MenuScene::createScene();
     Director::getInstance()->replaceScene(scene);
 }

@@ -23,9 +23,23 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(MenuScene);
     
+    virtual bool onTouchBegan(cocos2d::Touch *touch,cocos2d::Event *unused_event);
+    
 private:
     cocos2d::Camera*    m_pMainCamera;
+    cocos2d::Sprite*    makeyourSprite;
+    cocos2d::Sprite*    lifeSprite;
+    cocos2d::Sprite*    colorfulSprite;
+    cocos2d::Sprite*    logoSprite;
     int                 m_nCurrentLevel;
+    cocos2d::Size size;
+private:
+    
+     void makeyourEnd();
+     void LifeEnd();
+     void colorfulEnd();
+    bool isTouchState;
+    
 };
 
 #endif /* defined(__MYLC__MenuScene__) */
