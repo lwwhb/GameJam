@@ -25,7 +25,7 @@ public:
 protected:
     GroundCell();
 public:
-    static GroundCell* create();
+    static GroundCell* create(const std::string& path);
     
     float getRadius() const { return m_fRadius; }
     CellType getType() const { return m_Type; }

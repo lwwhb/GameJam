@@ -122,25 +122,13 @@ void GameScene::gameEnd()
 {
     if(m_pGroundLayer)
         m_pGroundLayer->setVisible(false);
-    if(m_nCurrentLevel <= 6)
+
+    if(m_pWhiteLayer)
     {
-        if(m_pWhiteLayer)
-        {
-            EaseExponentialOut* fadeIn = EaseExponentialOut::create(FadeIn::create(1.0f));
-            CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(GameScene::jumpToLevelSelect, this));
-            Sequence* sequence = Sequence::create( fadeIn, callFunc, NULL);
-            m_pWhiteLayer->runAction(sequence);
-        }
-    }
-    else
-    {
-        if(m_pWhiteLayer)
-        {
-            EaseExponentialOut* fadeIn = EaseExponentialOut::create(FadeIn::create(1.0f));
-            CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(GameScene::jumpToMenu, this));
-            Sequence* sequence = Sequence::create( fadeIn, callFunc, NULL);
-            m_pWhiteLayer->runAction(sequence);
-        }
+        EaseExponentialOut* fadeIn = EaseExponentialOut::create(FadeIn::create(1.0f));
+        CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(GameScene::jumpToLevelSelect, this));
+        Sequence* sequence = Sequence::create( fadeIn, callFunc, NULL);
+        m_pWhiteLayer->runAction(sequence);
     }
 }
 void GameScene::jumpToMenu()

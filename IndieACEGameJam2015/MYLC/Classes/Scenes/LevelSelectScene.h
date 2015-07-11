@@ -40,6 +40,8 @@ private:
     void beginSelect();
     void beginGame();
     void startGame();
+    void enableTouch();
+    void girlDisplay();
 private:
     cocos2d::Camera*    m_pMainCamera;
     cocos2d::Node*      m_pCube;
@@ -56,6 +58,8 @@ private:
     TextDisplayer* text;
 
     int                 m_nCurrentLevel;
+
+    bool                m_bTouchEnable;
 
 };
 

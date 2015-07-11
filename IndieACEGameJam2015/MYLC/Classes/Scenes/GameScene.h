@@ -33,7 +33,7 @@ public:
 private:
     GroundLayer*                m_pGroundLayer;
     cocos2d::Camera*            m_pMainCamera;
-    cocos2d::LayerColor*         m_pWhiteLayer;
+    cocos2d::LayerColor*        m_pWhiteLayer;
     int                         m_nCurrentLevel;
 };
 

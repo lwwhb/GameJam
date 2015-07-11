@@ -10,10 +10,10 @@
 #include "OutlineEffect3D.h"
 USING_NS_CC;
 
-GroundCell* GroundCell::create()
+GroundCell* GroundCell::create(const std::string& path)
 {
     auto cell = new (std::nothrow) GroundCell();
-    if (cell && cell->initWithFile("platform.obj"))
+    if (cell && cell->initWithFile(path))
     {
         cell->setTexture("IndexColor.png");
         cell->_contentSize = cell->getBoundingBox().size;

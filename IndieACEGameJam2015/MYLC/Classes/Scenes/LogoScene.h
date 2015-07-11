@@ -23,10 +23,28 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(LogoScene);
 private:
+    void colOneEnd();
+    void colTwoEnd();
+    void rowOneEnd();
+    void rowTwoEnd();
+    
     void precache();
     void endcache();
+    
+    void logoActon();
+    void nextScene();
+    
 private:
-    cocos2d::Sprite*    m_pLogoSprite;
+    cocos2d::Sprite*        tinyFlareSprite;
+    cocos2d::Sprite*        gamejamMarkSprite;
+    cocos2d::Sprite*        dateMarkSprite;
+    
+    cocos2d::LayerColor*    rowOne;
+    cocos2d::LayerColor*    rowTwo;
+    cocos2d::LayerColor*    colOne;
+    cocos2d::LayerColor*    colTwo;
+    cocos2d::Size size;
+    int callbackIndex;
 };
 
 #endif /* defined(__MYLC__LogoScene__) */

@@ -13,6 +13,7 @@
 #include "GroundCell.h"
 #include "Arrow.h"
 #include "GameScene.h"
+#include "Gift.h"
 class GroundLayer : public cocos2d::Layer
 {
     GroundLayer();
@@ -88,6 +89,7 @@ private:
     cocos2d::Vec3   m_Offset;
     
     cocos2d::Camera*    m_pCamera;
+    Gift*               m_pGift;
     
     MoveState     m_curState;
 };

@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "GameScene.h"
 #include "LevelSelectScene.h"
+#include "LogoScene.h"
 #include "SimpleAudioEngine.h"
 USING_NS_CC;
 using namespace CocosDenshion;
@@ -66,10 +67,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
+
     auto scene = LevelSelectScene::createScene();
     SimpleAudioEngine::getInstance()->preloadBackgroundMusic("Evenflow.mp3");
     SimpleAudioEngine::getInstance()->playBackgroundMusic("Evenflow.mp3",true);
-    // return the scene
+
+    
+
     // run
     director->runWithScene(scene);
 
