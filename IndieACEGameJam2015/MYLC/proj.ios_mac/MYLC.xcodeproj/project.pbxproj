@@ -171,6 +171,8 @@
 		559A0CE31B50A553005293D1 /* CubeFace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 559A0CE01B50A208005293D1 /* CubeFace.cpp */; };
 		559A0CF41B50C493005293D1 /* starfield.plist in Resources */ = {isa = PBXBuildFile; fileRef = 559A0CF31B50C493005293D1 /* starfield.plist */; };
 		559A0CF51B50C4A1005293D1 /* starfield.plist in Resources */ = {isa = PBXBuildFile; fileRef = 559A0CF31B50C493005293D1 /* starfield.plist */; };
+		55C912DA1B51B2C500E31E89 /* FinalScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C912D81B51B2C500E31E89 /* FinalScene.cpp */; };
+		55C912DB1B51B2E000E31E89 /* FinalScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55C912D81B51B2C500E31E89 /* FinalScene.cpp */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		895A94DE1B51A79000F55058 /* FZXIANGSU12.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 895A94DD1B51A79000F55058 /* FZXIANGSU12.TTF */; };
 		895A94DF1B51A79000F55058 /* FZXIANGSU12.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 895A94DD1B51A79000F55058 /* FZXIANGSU12.TTF */; };
@@ -361,6 +363,8 @@
 		559A0CE01B50A208005293D1 /* CubeFace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubeFace.cpp; sourceTree = "<group>"; };
 		559A0CE11B50A208005293D1 /* CubeFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeFace.h; sourceTree = "<group>"; };
 		559A0CF31B50C493005293D1 /* starfield.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = starfield.plist; sourceTree = "<group>"; };
+		55C912D81B51B2C500E31E89 /* FinalScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FinalScene.cpp; sourceTree = "<group>"; };
+		55C912D91B51B2C500E31E89 /* FinalScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalScene.h; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		895A94DD1B51A79000F55058 /* FZXIANGSU12.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZXIANGSU12.TTF; sourceTree = "<group>"; };
 		895A94E01B51A7A800F55058 /* bboy.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy.mtl; sourceTree = "<group>"; };
@@ -602,6 +606,8 @@
 		556A40861B50263B00A39E57 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55C912D81B51B2C500E31E89 /* FinalScene.cpp */,
+				55C912D91B51B2C500E31E89 /* FinalScene.h */,
 				556A40871B50263B00A39E57 /* GameScene.cpp */,
 				556A40881B50263B00A39E57 /* GameScene.h */,
 				556A40891B50263B00A39E57 /* LevelSelectScene.cpp */,
@@ -1048,6 +1054,7 @@
 				556A40A11B50263B00A39E57 /* LevelSelectScene.cpp in Sources */,
 				556A40A01B50263B00A39E57 /* GameScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				55C912DA1B51B2C500E31E89 /* FinalScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1055,6 +1062,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C912DB1B51B2E000E31E89 /* FinalScene.cpp in Sources */,
 				5568E9C71B5191DC00D3A6E7 /* Gift.cpp in Sources */,
 				559A0CE31B50A553005293D1 /* CubeFace.cpp in Sources */,
 				895A94F61B51A7F500F55058 /* Boy.cpp in Sources */,
