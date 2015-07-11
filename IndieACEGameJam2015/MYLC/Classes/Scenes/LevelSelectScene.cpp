@@ -10,7 +10,10 @@
 #include "CubeFace.h"
 #include "UtilityHelper.h"
 #include "GameScene.h"
+#include "SimpleAudioEngine.h"
+
 USING_NS_CC;
+using namespace CocosDenshion;
 
 Scene* LevelSelectScene::createScene()
 {
@@ -22,7 +25,7 @@ Scene* LevelSelectScene::createScene()
     
     // add layer as a child to scene
     scene->addChild(layer);
-    
+    SimpleAudioEngine::getInstance()->playBackgroundMusic("Evenflow.mp3",true);
     // return the scene
     return scene;
 }
@@ -60,6 +63,17 @@ bool LevelSelectScene::init()
     starfield->setGravity(Vec2(-40.0f, 0));
     addChild(starfield);
     
+    //lixu add boy
+    boy = Boy::create();
+    addChild(boy);
+    boy->setScale(2.0f);
+    boy->setPosition3D(Vec3(150,200,0));
+    
+    text = Label::create();
+    
+    
+    //+lixu
+    
     m_pCube = Node::create();
     if(!m_pCube)
         return false;
@@ -93,6 +107,7 @@ bool LevelSelectScene::init()
         return false;
     m_pCube->addChild(m_pDown);
     
+    
 
     
     m_pCube->setCameraMask((unsigned short)CameraFlag::USER1);
@@ -115,8 +130,8 @@ bool LevelSelectScene::init()
     RepeatForever* repeat = RepeatForever::create(sequence);
     
     m_pCube->runAction(repeat);
-    
-    
+    boy->runAction(repeat);
+
     m_pMainCamera = Camera::create();
     if(!m_pMainCamera)
         return false;
