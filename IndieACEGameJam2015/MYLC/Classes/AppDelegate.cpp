@@ -1,8 +1,8 @@
 #include "AppDelegate.h"
-#include "GameScene.h"
 #include "LevelSelectScene.h"
 #include "LogoScene.h"
 #include "SimpleAudioEngine.h"
+#include "FinalScene.h"
 USING_NS_CC;
 using namespace CocosDenshion;
 AppDelegate::AppDelegate() {
@@ -36,7 +36,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLViewImpl::create("My Game");
+        glview = GLViewImpl::create("Make your life colorful!");
         director->setOpenGLView(glview);
     }
 
@@ -71,8 +71,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto scene = LogoScene::createScene();
     SimpleAudioEngine::getInstance()->preloadBackgroundMusic("Evenflow.mp3");
     SimpleAudioEngine::getInstance()->playBackgroundMusic("Evenflow.mp3",true);
+    SimpleAudioEngine::getInstance()->preloadEffect("life.mp3");
+    SimpleAudioEngine::getInstance()->preloadEffect("start.mp3");
 
-    
 
     // run
     director->runWithScene(scene);
