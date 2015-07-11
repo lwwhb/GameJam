@@ -40,13 +40,35 @@ CubeFace* CubeFace::create(FaceType type)
         }
         if(bRet)
         {
+            int currentLevel = UserDefault::getInstance()->getIntegerForKey("CurrentLevel", 1);
             cubeFace->setTexture("IndexColor.png");
             cubeFace->setType(type);
             cubeFace->_contentSize = cubeFace->getBoundingBox().size;
             cubeFace->m_fRadius = cubeFace->_contentSize.width*0.5f;
         
             OutlineEffect3D* outline = OutlineEffect3D::create();
-            outline->setOutlineColor(Vec3(1.0f, 0.0f, 1.0f));
+            switch (currentLevel) {
+                case 1:
+                    outline->setOutlineColor(Vec3(1.0f, 153.0f/255.0f, 0.0f));
+                    break;
+                case 2:
+                    outline->setOutlineColor(Vec3(102.0f/255.0f, 1.0f, 1.0f));
+                    break;
+                case 3:
+                    outline->setOutlineColor(Vec3(1.0f, 204.0f/255.0f, 0.0f));
+                    break;
+                case 4:
+                    outline->setOutlineColor(Vec3(204.0f/255.0f, 204.0f/255.0f, 1.0f));
+                    break;
+                case 5:
+                    outline->setOutlineColor(Vec3(1.0f, 1.0f, 204.0f/255.0f));
+                    break;
+                case 6:
+                    outline->setOutlineColor(Vec3(1.0f, 204.0f/255.0f, 1.0f));
+                    break;
+                default:
+                    break;
+            }
             outline->setOutlineWidth(0.05f);
             cubeFace->addEffect(outline, 1);
         

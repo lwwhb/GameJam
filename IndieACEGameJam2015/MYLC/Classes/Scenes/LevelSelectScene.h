@@ -34,6 +34,7 @@ protected:
     virtual void onTouchesMoved(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event *event);
     virtual void onTouchesEnded(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event *event);
 private:
+    void beginSelect();
     void beginGame();
     void startGame();
 private:
@@ -47,6 +48,7 @@ private:
     CubeFace*           m_pDown;
     float               m_fRate;
     cocos2d::LayerColor*         m_pWhiteLayer;
+    int                 m_nCurrentLevel;
 };
 
 #endif /* defined(__MYLC__LevelSelectScene__) */
