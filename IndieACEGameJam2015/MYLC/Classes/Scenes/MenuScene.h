@@ -27,16 +27,13 @@ public:
     
 private:
     cocos2d::Camera*    m_pMainCamera;
-    cocos2d::Sprite*    makeyourSprite;
-    cocos2d::Sprite*    lifeSprite;
+    cocos2d::Sprite*    makeyourlifeSprite;
     cocos2d::Sprite*    colorfulSprite;
-    cocos2d::Sprite*    logoSprite;
     int                 m_nCurrentLevel;
     cocos2d::Size size;
 private:
     
      void makeyourEnd();
-     void LifeEnd();
      void colorfulEnd();
     bool isTouchState;
     

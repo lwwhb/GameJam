@@ -3,6 +3,7 @@
 #include "LevelSelectScene.h"
 #include "LogoScene.h"
 #include "SimpleAudioEngine.h"
+#include "MenuScene.h"
 USING_NS_CC;
 using namespace CocosDenshion;
 AppDelegate::AppDelegate() {
@@ -67,7 +68,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    auto scene = LogoScene::createScene();
+    auto scene = MenuScene::createScene();
 
     // run
     director->runWithScene(scene);

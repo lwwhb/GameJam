@@ -185,12 +185,10 @@
 		EC7D86FE1B5133D700EF37CC /* tinyflare.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7D86FC1B5133CF00EF37CC /* tinyflare.png */; };
 		EC7D87001B51404A00EF37CC /* 2015.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7D86FF1B51404A00EF37CC /* 2015.png */; };
 		EC7D87011B51405300EF37CC /* 2015.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7D86FF1B51404A00EF37CC /* 2015.png */; };
-		EC7D870A1B51581B00EF37CC /* makeyourim.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7D87091B51581B00EF37CC /* makeyourim.png */; };
-		EC7D870B1B51582700EF37CC /* makeyourim.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7D87091B51581B00EF37CC /* makeyourim.png */; };
-		EC7D870D1B515C4800EF37CC /* life.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7D870C1B515C4800EF37CC /* life.png */; };
-		EC7D870E1B515C5700EF37CC /* life.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7D870C1B515C4800EF37CC /* life.png */; };
 		EC7D87101B515E0D00EF37CC /* colorful.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7D870F1B515E0D00EF37CC /* colorful.png */; };
 		EC7D87111B515E1300EF37CC /* colorful.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7D870F1B515E0D00EF37CC /* colorful.png */; };
+		EC7D87181B519E6900EF37CC /* makeyourlife.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7D87171B519E6900EF37CC /* makeyourlife.png */; };
+		EC7D87191B519F6B00EF37CC /* makeyourlife.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7D87171B519E6900EF37CC /* makeyourlife.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -354,9 +352,8 @@
 		EC7D86F91B512AE300EF37CC /* indiace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indiace.png; sourceTree = "<group>"; };
 		EC7D86FC1B5133CF00EF37CC /* tinyflare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tinyflare.png; sourceTree = "<group>"; };
 		EC7D86FF1B51404A00EF37CC /* 2015.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2015.png; sourceTree = "<group>"; };
-		EC7D87091B51581B00EF37CC /* makeyourim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = makeyourim.png; sourceTree = "<group>"; };
-		EC7D870C1B515C4800EF37CC /* life.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = life.png; sourceTree = "<group>"; };
 		EC7D870F1B515E0D00EF37CC /* colorful.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colorful.png; sourceTree = "<group>"; };
+		EC7D87171B519E6900EF37CC /* makeyourlife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = makeyourlife.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -717,9 +714,8 @@
 		556A40BF1B50265100A39E57 /* textures */ = {
 			isa = PBXGroup;
 			children = (
+				EC7D87171B519E6900EF37CC /* makeyourlife.png */,
 				EC7D870F1B515E0D00EF37CC /* colorful.png */,
-				EC7D870C1B515C4800EF37CC /* life.png */,
-				EC7D87091B51581B00EF37CC /* makeyourim.png */,
 				EC7D86FF1B51404A00EF37CC /* 2015.png */,
 				EC7D86FC1B5133CF00EF37CC /* tinyflare.png */,
 				EC7D86F91B512AE300EF37CC /* indiace.png */,
@@ -863,11 +859,9 @@
 				559A0CC61B50A0BA005293D1 /* 1.obj in Resources */,
 				556A40C81B50265100A39E57 /* 5x5-6.tmx in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
-				EC7D870A1B51581B00EF37CC /* makeyourim.png in Resources */,
 				559A0CC71B50A0BA005293D1 /* 2.mtl in Resources */,
 				556A40C51B50265100A39E57 /* 5x5-3.tmx in Resources */,
 				5568E9A01B5191B000D3A6E7 /* platform3.mtl in Resources */,
-				EC7D870D1B515C4800EF37CC /* life.png in Resources */,
 				559A0CCC1B50A0BA005293D1 /* 4.obj in Resources */,
 				5568E9AA1B5191B000D3A6E7 /* tree.mtl in Resources */,
 				556A40C41B50265100A39E57 /* 5x5-2.tmx in Resources */,
@@ -878,6 +872,7 @@
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				559A0CC91B50A0BA005293D1 /* 3.mtl in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				EC7D87181B519E6900EF37CC /* makeyourlife.png in Resources */,
 				5568E9A81B5191B000D3A6E7 /* sun.mtl in Resources */,
 				5568E9AB1B5191B000D3A6E7 /* tree.obj in Resources */,
 				5568E9A41B5191B000D3A6E7 /* platform5.mtl in Resources */,
@@ -909,6 +904,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7D87191B519F6B00EF37CC /* makeyourlife.png in Resources */,
 				5568E9AF1B5191D000D3A6E7 /* platform1.mtl in Resources */,
 				5568E9B01B5191D000D3A6E7 /* platform1.obj in Resources */,
 				5568E9B11B5191D000D3A6E7 /* platform2.mtl in Resources */,
@@ -934,8 +930,6 @@
 				5568E9C51B5191D000D3A6E7 /* house.mtl in Resources */,
 				5568E9C61B5191D000D3A6E7 /* house.obj in Resources */,
 				EC7D87111B515E1300EF37CC /* colorful.png in Resources */,
-				EC7D870E1B515C5700EF37CC /* life.png in Resources */,
-				EC7D870B1B51582700EF37CC /* makeyourim.png in Resources */,
 				EC7D87011B51405300EF37CC /* 2015.png in Resources */,
 				EC7D86FE1B5133D700EF37CC /* tinyflare.png in Resources */,
 				EC7D86FB1B512B1700EF37CC /* indiace.png in Resources */,
