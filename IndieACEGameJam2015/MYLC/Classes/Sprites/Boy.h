@@ -18,7 +18,7 @@ class Boy : public EffectSprite3D
 protected:
     Boy();
 public:
-    static Boy* create();
+    static Boy* create(int level);
     
 };
 

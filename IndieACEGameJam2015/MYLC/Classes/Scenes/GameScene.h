@@ -10,6 +10,8 @@
 #define __MYLC__GameScene__
 
 #include "cocos2d.h"
+#include "Boy.h"
+
 class GroundLayer;
 class GameScene : public cocos2d::Layer
 {
@@ -35,6 +37,7 @@ private:
     cocos2d::Camera*            m_pMainCamera;
     cocos2d::LayerColor*        m_pWhiteLayer;
     int                         m_nCurrentLevel;
+    Boy* m_boy;
 };
 
 #endif /* defined(__MYLC__GameScene__) */

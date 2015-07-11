@@ -67,7 +67,7 @@ bool LevelSelectScene::init()
     addChild(starfield);
     
     //lixu add boy
-    boy = Boy::create();
+    boy = Boy::create(m_nCurrentLevel);
     addChild(boy);
     boy->setPosition3D(Vec3(-90,-100,-120));
     boy->setCameraMask((unsigned short)CameraFlag::USER1);
@@ -84,7 +84,7 @@ bool LevelSelectScene::init()
     std::vector<std::string> texts;
 
     switch (m_nCurrentLevel) {
-        case 0:
+        case 1:
             texts.clear();
             texts.push_back("……………………");
             texts.push_back("…………我…………");
@@ -95,7 +95,7 @@ bool LevelSelectScene::init()
             texts.push_back("我该做点什么？");
             texts.push_back("也许我该到那里去？");
             break;
-        case 1:
+        case 2:
             texts.clear();
             texts.push_back("……………………");
             texts.push_back("温暖的感觉");
@@ -107,7 +107,7 @@ bool LevelSelectScene::init()
             texts.push_back("会有新的“色彩”么？");
             break;
 
-        case 2:
+        case 3:
             texts.clear();
             texts.push_back("……………………");
             texts.push_back("我找到了新的”色彩“");
@@ -120,7 +120,7 @@ bool LevelSelectScene::init()
             texts.push_back("我要再到那里去");
 
             break;
-        case 3:
+        case 4:
             texts.clear();
             texts.push_back("哈哈哈");
             texts.push_back("果然，果然");
@@ -131,7 +131,7 @@ bool LevelSelectScene::init()
             texts.push_back("到那里去，到那里去");
             texts.push_back("寻找，寻找色彩");
             break;
-        case 4:
+        case 5:
             texts.clear();
             texts.push_back("我又找到了一些");
             texts.push_back("很美");
@@ -145,7 +145,7 @@ bool LevelSelectScene::init()
             texts.push_back("我要再去那里寻找");
             texts.push_back("寻找，直到找到为止");
             break;
-        case 5:
+        case 6:
             texts.clear();
             texts.push_back("够了");
             texts.push_back("我累了");
