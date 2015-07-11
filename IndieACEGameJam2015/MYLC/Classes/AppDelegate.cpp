@@ -1,8 +1,8 @@
 #include "AppDelegate.h"
-#include "GameScene.h"
 #include "LevelSelectScene.h"
 #include "LogoScene.h"
 #include "SimpleAudioEngine.h"
+#include "FinalScene.h"
 USING_NS_CC;
 using namespace CocosDenshion;
 AppDelegate::AppDelegate() {
@@ -36,7 +36,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLViewImpl::create("My Game");
+        glview = GLViewImpl::create("Make your life colorful!");
         director->setOpenGLView(glview);
     }
 
@@ -67,7 +67,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    auto scene = LogoScene::createScene();
+    auto scene = FinalScene::createScene();
 
     // run
     director->runWithScene(scene);

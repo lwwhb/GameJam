@@ -95,6 +95,16 @@
 		5568E9C51B5191D000D3A6E7 /* house.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 5568E9821B5191A600D3A6E7 /* house.mtl */; };
 		5568E9C61B5191D000D3A6E7 /* house.obj in Resources */ = {isa = PBXBuildFile; fileRef = 5568E9831B5191A600D3A6E7 /* house.obj */; };
 		5568E9C71B5191DC00D3A6E7 /* Gift.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5568E9AC1B5191C200D3A6E7 /* Gift.cpp */; };
+		5568E9CE1B51976800D3A6E7 /* bboy.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 5568E9CA1B51976800D3A6E7 /* bboy.mtl */; };
+		5568E9CF1B51976800D3A6E7 /* bboy.obj in Resources */ = {isa = PBXBuildFile; fileRef = 5568E9CB1B51976800D3A6E7 /* bboy.obj */; };
+		5568E9D01B51976800D3A6E7 /* girl.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 5568E9CC1B51976800D3A6E7 /* girl.mtl */; };
+		5568E9D11B51976800D3A6E7 /* girl.obj in Resources */ = {isa = PBXBuildFile; fileRef = 5568E9CD1B51976800D3A6E7 /* girl.obj */; };
+		5568E9D21B51977A00D3A6E7 /* bboy.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 5568E9CA1B51976800D3A6E7 /* bboy.mtl */; };
+		5568E9D31B51977A00D3A6E7 /* bboy.obj in Resources */ = {isa = PBXBuildFile; fileRef = 5568E9CB1B51976800D3A6E7 /* bboy.obj */; };
+		5568E9D41B51977A00D3A6E7 /* girl.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 5568E9CC1B51976800D3A6E7 /* girl.mtl */; };
+		5568E9D51B51977A00D3A6E7 /* girl.obj in Resources */ = {isa = PBXBuildFile; fileRef = 5568E9CD1B51976800D3A6E7 /* girl.obj */; };
+		5568E9D81B51980900D3A6E7 /* FinalScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5568E9D61B51980900D3A6E7 /* FinalScene.cpp */; };
+		5568E9DA1B519CA300D3A6E7 /* FinalScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5568E9D61B51980900D3A6E7 /* FinalScene.cpp */; };
 		556A409B1B50263B00A39E57 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 556A40791B50263B00A39E57 /* AppDelegate.cpp */; };
 		556A409D1B50263B00A39E57 /* BaseEffect3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 556A407F1B50263B00A39E57 /* BaseEffect3D.cpp */; };
 		556A409E1B50263B00A39E57 /* OutlineEffect3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 556A40811B50263B00A39E57 /* OutlineEffect3D.cpp */; };
@@ -292,6 +302,12 @@
 		5568E99B1B5191B000D3A6E7 /* tree.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tree.obj; sourceTree = "<group>"; };
 		5568E9AC1B5191C200D3A6E7 /* Gift.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gift.cpp; sourceTree = "<group>"; };
 		5568E9AD1B5191C200D3A6E7 /* Gift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gift.h; sourceTree = "<group>"; };
+		5568E9CA1B51976800D3A6E7 /* bboy.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy.mtl; sourceTree = "<group>"; };
+		5568E9CB1B51976800D3A6E7 /* bboy.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy.obj; sourceTree = "<group>"; };
+		5568E9CC1B51976800D3A6E7 /* girl.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = girl.mtl; sourceTree = "<group>"; };
+		5568E9CD1B51976800D3A6E7 /* girl.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = girl.obj; sourceTree = "<group>"; };
+		5568E9D61B51980900D3A6E7 /* FinalScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FinalScene.cpp; sourceTree = "<group>"; };
+		5568E9D71B51980900D3A6E7 /* FinalScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalScene.h; sourceTree = "<group>"; };
 		556A40791B50263B00A39E57 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		556A407A1B50263B00A39E57 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		556A407F1B50263B00A39E57 /* BaseEffect3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseEffect3D.cpp; sourceTree = "<group>"; };
@@ -581,6 +597,8 @@
 				556A408C1B50263B00A39E57 /* LogoScene.h */,
 				556A408D1B50263B00A39E57 /* MenuScene.cpp */,
 				556A408E1B50263B00A39E57 /* MenuScene.h */,
+				5568E9D61B51980900D3A6E7 /* FinalScene.cpp */,
+				5568E9D71B51980900D3A6E7 /* FinalScene.h */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -641,6 +659,10 @@
 		556A40B21B50265100A39E57 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				5568E9CA1B51976800D3A6E7 /* bboy.mtl */,
+				5568E9CB1B51976800D3A6E7 /* bboy.obj */,
+				5568E9CC1B51976800D3A6E7 /* girl.mtl */,
+				5568E9CD1B51976800D3A6E7 /* girl.obj */,
 				5568E98C1B5191B000D3A6E7 /* platform1.mtl */,
 				5568E98D1B5191B000D3A6E7 /* platform1.obj */,
 				5568E98E1B5191B000D3A6E7 /* platform2.mtl */,
@@ -836,6 +858,7 @@
 				5568E9871B5191A600D3A6E7 /* flower.obj in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				EC7D86FD1B5133CF00EF37CC /* tinyflare.png in Resources */,
+				5568E9CE1B51976800D3A6E7 /* bboy.mtl in Resources */,
 				5568E99C1B5191B000D3A6E7 /* platform1.mtl in Resources */,
 				5568E9A11B5191B000D3A6E7 /* platform3.obj in Resources */,
 				5568E9A51B5191B000D3A6E7 /* platform5.obj in Resources */,
@@ -849,6 +872,7 @@
 				556A40C91B50265100A39E57 /* arrow.mtl in Resources */,
 				5568E9A21B5191B000D3A6E7 /* platform4.mtl in Resources */,
 				EC7D87101B515E0D00EF37CC /* colorful.png in Resources */,
+				5568E9CF1B51976800D3A6E7 /* bboy.obj in Resources */,
 				5568E99E1B5191B000D3A6E7 /* platform2.mtl in Resources */,
 				5568E98A1B5191A600D3A6E7 /* house.mtl in Resources */,
 				5568E9A61B5191B000D3A6E7 /* platform6.mtl in Resources */,
@@ -864,6 +888,7 @@
 				556A40C81B50265100A39E57 /* 5x5-6.tmx in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				EC7D870A1B51581B00EF37CC /* makeyourim.png in Resources */,
+				5568E9D01B51976800D3A6E7 /* girl.mtl in Resources */,
 				559A0CC71B50A0BA005293D1 /* 2.mtl in Resources */,
 				556A40C51B50265100A39E57 /* 5x5-3.tmx in Resources */,
 				5568E9A01B5191B000D3A6E7 /* platform3.mtl in Resources */,
@@ -874,6 +899,7 @@
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				559A0CCE1B50A0BA005293D1 /* 5.obj in Resources */,
 				556A40D21B50265100A39E57 /* IndexColor.png in Resources */,
+				5568E9D11B51976800D3A6E7 /* girl.obj in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				559A0CC91B50A0BA005293D1 /* 3.mtl in Resources */,
@@ -909,6 +935,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5568E9D21B51977A00D3A6E7 /* bboy.mtl in Resources */,
+				5568E9D31B51977A00D3A6E7 /* bboy.obj in Resources */,
+				5568E9D41B51977A00D3A6E7 /* girl.mtl in Resources */,
+				5568E9D51B51977A00D3A6E7 /* girl.obj in Resources */,
 				5568E9AF1B5191D000D3A6E7 /* platform1.mtl in Resources */,
 				5568E9B01B5191D000D3A6E7 /* platform1.obj in Resources */,
 				5568E9B11B5191D000D3A6E7 /* platform2.mtl in Resources */,
@@ -978,6 +1008,7 @@
 				556A409D1B50263B00A39E57 /* BaseEffect3D.cpp in Sources */,
 				556A40A41B50263B00A39E57 /* Arrow.cpp in Sources */,
 				556A40A61B50263B00A39E57 /* GroundCell.cpp in Sources */,
+				5568E9D81B51980900D3A6E7 /* FinalScene.cpp in Sources */,
 				556A40A81B50263B00A39E57 /* UtilityHelper.cpp in Sources */,
 				556A40A31B50263B00A39E57 /* MenuScene.cpp in Sources */,
 				556A40A51B50263B00A39E57 /* EffectSprite3D.cpp in Sources */,
@@ -999,6 +1030,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5568E9DA1B519CA300D3A6E7 /* FinalScene.cpp in Sources */,
 				5568E9C71B5191DC00D3A6E7 /* Gift.cpp in Sources */,
 				559A0CE31B50A553005293D1 /* CubeFace.cpp in Sources */,
 				556A40D41B50266B00A39E57 /* AppDelegate.cpp in Sources */,
