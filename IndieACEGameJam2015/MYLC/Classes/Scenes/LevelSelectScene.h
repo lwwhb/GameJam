@@ -37,6 +37,8 @@ private:
     void beginSelect();
     void beginGame();
     void startGame();
+    void enableTouch();
+    void girlDisplay();
 private:
     cocos2d::Camera*    m_pMainCamera;
     cocos2d::Node*      m_pCube;
@@ -49,6 +51,7 @@ private:
     float               m_fRate;
     cocos2d::LayerColor*         m_pWhiteLayer;
     int                 m_nCurrentLevel;
+    bool                m_bTouchEnable;
 };
 
 #endif /* defined(__MYLC__LevelSelectScene__) */

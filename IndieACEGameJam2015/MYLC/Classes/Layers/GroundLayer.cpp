@@ -33,6 +33,7 @@ GroundLayer::GroundLayer()
     m_pArrowRight = nullptr;
     m_pCurrentCell = nullptr;
     m_pCamera = nullptr;
+    m_pGift   = nullptr;
     m_curState = MS_UNKNOWN;
 }
 
@@ -46,13 +47,15 @@ bool GroundLayer::init(const std::string& tmxFile)
         return false;
     
     m_MapSize = mapInfo->getMapSize();
-    
+    int currentLevel = UserDefault::getInstance()->getIntegerForKey("CurrentLevel", 1);
+    std::string modelPath = "platform";
+    modelPath = modelPath + Value(currentLevel).asString() + ".obj";
     cocos2d::TMXObjectGroup* objectGroup = mapInfo->getObjectGroups().at(0);
     if(objectGroup->getObjects().size() == m_MapSize.width * m_MapSize.height)
     {
         for (int i = 0; i<m_MapSize.height; i++) {
             for (int j = 0; j<m_MapSize.width; j++) {
-                GroundCell* cell = GroundCell::create();
+                GroundCell* cell = GroundCell::create(modelPath);
                 if(cell)
                 {
                     int index = i*m_MapSize.width + j;
@@ -125,6 +128,15 @@ bool GroundLayer::init(const std::string& tmxFile)
     m_pArrowRight->setScale(0.9f);
     m_pArrowRight->setRotation3D(Vec3(0,-90,0));
     addChild(m_pArrowRight);
+    
+    m_pGift = Gift::create((Gift::GiftType(currentLevel)));
+    if(!m_pGift)
+        return false;
+    m_pGift->setCameraMask((unsigned short)CameraFlag::USER1);
+    m_pGift->setPosition3D(Vec3(20,0,20));
+    m_pGift->setRotation3D(Vec3(180, 0, 180));
+    m_pGift->setScale(0.0f);
+    addChild(m_pGift);
     
     AmbientLight* ambLight = AmbientLight::create(Color3B(150, 150, 150));
     if(!ambLight)
@@ -422,9 +434,20 @@ void GroundLayer::checkWinOrLose()
         }
     }
     if(win)
-        m_pGameScene->gameWin();
+    {
+        if(m_pGift)
+        {
+            EaseBackInOut* scaleTo = EaseBackInOut::create(ScaleTo::create(1.0f, 1.8f));
+            DelayTime* delay = DelayTime::create(3.0f);
+            CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(GameScene::gameWin,m_pGameScene));
+            Sequence* sequence = Sequence::create(scaleTo, delay, callFunc, NULL);
+            m_pGift->runAction(sequence);
+        }
+    }
     else
+    {
         m_pGameScene->gameLose();
+    }
     
 }
 void GroundLayer::onTouchesBegan(const std::vector<Touch*>& touches, Event *event)

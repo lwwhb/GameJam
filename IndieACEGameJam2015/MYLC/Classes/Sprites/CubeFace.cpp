@@ -69,7 +69,7 @@ CubeFace* CubeFace::create(FaceType type)
                 default:
                     break;
             }
-            outline->setOutlineWidth(0.05f);
+            outline->setOutlineWidth(0.1f);
             cubeFace->addEffect(outline, 1);
         
             cubeFace->autorelease();
