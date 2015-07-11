@@ -26,9 +26,11 @@ public:
     
     virtual void gameWin();
     virtual void gameLose();
+    void gameStart();
 private:
-    GroundLayer*        m_pGroundLayer;
-    cocos2d::Camera*    m_pMainCamera;
+    GroundLayer*                m_pGroundLayer;
+    cocos2d::Camera*            m_pMainCamera;
+    cocos2d::LayerColor*         m_pWhiteLayer;
 };
 
 #endif /* defined(__MYLC__GameScene__) */

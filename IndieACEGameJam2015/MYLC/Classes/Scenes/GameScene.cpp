@@ -8,7 +8,6 @@
 
 #include "GameScene.h"
 #include "GroundLayer.h"
-#include "GameController.h"
 USING_NS_CC;
 
 Scene* GameScene::createScene()
@@ -29,6 +28,7 @@ GameScene::GameScene()
 {
     m_pGroundLayer  = nullptr;
     m_pMainCamera   = nullptr;
+    m_pWhiteLayer   = nullptr;
 }
 // on "init" you need to initialize your instance
 bool GameScene::init()
@@ -39,23 +39,15 @@ bool GameScene::init()
     {
         return false;
     }
-    m_pGroundLayer = GroundLayer::create("5x5-6.tmx");
-    if(!m_pGroundLayer)
+    m_pWhiteLayer = LayerColor::create(Color4B::WHITE);
+    if(!m_pWhiteLayer)
         return false;
-    m_pGroundLayer->setCameraMask((unsigned short)CameraFlag::USER1);
-    ///focus
-    m_pGroundLayer->setAnchorPoint(Vec2::ZERO);
-    addChild(m_pGroundLayer);
-    
-    m_pMainCamera = Camera::create();
-    if(!m_pMainCamera)
-        return false;
-    m_pMainCamera->setPosition3D(Vec3(0,-m_pGroundLayer->getGroundRadius()*2.5f*cosf(M_PI),m_pGroundLayer->getGroundRadius()*2.5f*sinf(M_PI)) + m_pGroundLayer->getOffset());
-    m_pMainCamera->lookAt(m_pGroundLayer->getPosition3D() + m_pGroundLayer->getOffset());
-    addChild(m_pMainCamera);
-    m_pMainCamera->setCameraFlag(CameraFlag::USER1);
-    m_pGroundLayer->setCamera(m_pMainCamera);
-    m_pGroundLayer->setGameScene(this);
+    addChild(m_pWhiteLayer);
+
+    EaseExponentialIn* fadeOut = EaseExponentialIn::create(FadeOut::create(1.5f));
+    CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(GameScene::gameStart, this));
+    Sequence* sequence = Sequence::create( fadeOut,  callFunc, NULL);
+    m_pWhiteLayer->runAction(sequence);
     return true;
 }
 void GameScene::gameWin()
@@ -65,4 +57,25 @@ void GameScene::gameWin()
 void GameScene::gameLose()
 {
     CCLOG("gameLose");
+}
+void GameScene::gameStart()
+{
+    m_pGroundLayer = GroundLayer::create("5x5-6.tmx");
+    if(!m_pGroundLayer)
+        return;
+    m_pGroundLayer->setCameraMask((unsigned short)CameraFlag::USER1);
+    ///focus
+    m_pGroundLayer->setAnchorPoint(Vec2::ZERO);
+    addChild(m_pGroundLayer);
+    
+    m_pMainCamera = Camera::create();
+    if(!m_pMainCamera)
+        return;
+    m_pMainCamera->setPosition3D(Vec3(0,-m_pGroundLayer->getGroundRadius()*2.5f*cosf(M_PI),m_pGroundLayer->getGroundRadius()*2.5f*sinf(M_PI)) + m_pGroundLayer->getOffset());
+    m_pMainCamera->lookAt(m_pGroundLayer->getPosition3D() + m_pGroundLayer->getOffset());
+    addChild(m_pMainCamera);
+    m_pMainCamera->setCameraFlag(CameraFlag::USER1);
+    m_pGroundLayer->setCamera(m_pMainCamera);
+    m_pGroundLayer->setGameScene(this);
+
 }
