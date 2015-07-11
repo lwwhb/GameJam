@@ -8,6 +8,7 @@
 
 #include "MenuScene.h"
 #include "LevelSelectScene.h"
+#include "SimpleAudioEngine.h"
 USING_NS_CC;
 
 Scene* MenuScene::createScene()
@@ -63,24 +64,17 @@ bool MenuScene::init()
     
     makeyourlifeSprite  = Sprite::create("makeyourlife.png");
     makeyourlifeSprite->setPosition(size.width/2-100,size.height);
-    makeyourlifeSprite->setScale(1.5);
+    makeyourlifeSprite->setScale(1.2);
     this->addChild(makeyourlifeSprite);
     
     
     colorfulSprite  = Sprite::create("colorful.png");
     colorfulSprite->setPosition(size.width+colorfulSprite->getContentSize().width,size.height*0.7-100);
-    colorfulSprite->setScale(2);
+    colorfulSprite->setScale(1.6);
     this->addChild(colorfulSprite);
     
     
     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(MenuScene::makeyourEnd, this));
-//    auto  makeyouSeqAction = Sequence::create(Spawn::create(ScaleTo::create(0.6, 0.1),RotateBy::create(0.6, 120),NULL), Spawn::create(ScaleTo::create(0.6, 0.3),RotateBy::create(0.6, 240),NULL),
-//        Spawn::create(ScaleTo::create(0.6, 0.5),RotateBy::create(0.6, 360),NULL),
-//        Spawn::create(ScaleTo::create(0.6, 0.7),RotateBy::create(0.6, 240),NULL),
-//        Spawn::create(ScaleTo::create(0.6, 0.9),RotateBy::create(0.6, 120),NULL),
-//        Spawn::create(ScaleTo::create(0.6, 1),RotateBy::create(0.6, 0),NULL),callFunc, NULL);
-//    starfield->runAction(makeyouSeqAction);
-    
    
     makeyourlifeSprite->runAction(Sequence::create(MoveTo::create(0.5, Vec2(size.width/2-100,size.height*0.7)),JumpBy::create(0.3,Point::ZERO, 30, 1), callFunc,NULL));
     
@@ -96,6 +90,7 @@ bool MenuScene::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *unused_event
     if (!isTouchState) {
         return false;
     }else{
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("start.mp3");
         Director::getInstance()->replaceScene(LevelSelectScene::createScene());
     }
     
@@ -113,12 +108,11 @@ void MenuScene::makeyourEnd()
 void MenuScene::colorfulEnd()
 {
     
-    
-//    auto touchLabel = Label::createWithTTF("请触摸开始游戏", "FZXIANGSU12.TTF", 20);
-//    touchLabel->setPosition(size.width/2,100);
-//    this->addChild(touchLabel);
-//    auto touchFadeToaAction = FadeTo::create(0.7,10);
-//    touchLabel->runAction(RepeatForever::create(Sequence::create(touchFadeToaAction,FadeIn::create(2), NULL)));
+    auto touchLabel = Label::createWithTTF("请触摸开始游戏", "FZXIANGSU12.TTF", 20);
+    touchLabel->setPosition(size.width/2,100);
+    this->addChild(touchLabel);
+    auto touchFadeToaAction = FadeTo::create(0.7,10);
+    touchLabel->runAction(RepeatForever::create(Sequence::create(touchFadeToaAction,FadeIn::create(2), NULL)));
     
     isTouchState = true;
 }

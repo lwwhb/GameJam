@@ -11,6 +11,9 @@
 
 #include "cocos2d.h"
 #include "CubeFace.h"
+#include "Boy.h"
+#include "TextDisplayer.h"
+
 class LevelSelectScene : public cocos2d::Layer
 {
     LevelSelectScene();
@@ -50,8 +53,14 @@ private:
     CubeFace*           m_pDown;
     float               m_fRate;
     cocos2d::LayerColor*         m_pWhiteLayer;
+
+    Boy *boy;
+    TextDisplayer* text;
+
     int                 m_nCurrentLevel;
+
     bool                m_bTouchEnable;
+
 };
 
 #endif /* defined(__MYLC__LevelSelectScene__) */

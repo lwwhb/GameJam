@@ -9,7 +9,7 @@
 #include "LogoScene.h"
 #include "GroundLayer.h"
 #include "MenuScene.h"
-
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
@@ -157,6 +157,7 @@ void LogoScene::precache()
     callbackIndex++;
     if (callbackIndex==4)
     {
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("life.mp3");
         CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LogoScene::endcache, this));
         auto tinyFlareFadeInAction = FadeIn::create(2);
         auto tinyFlareMoveAction = MoveBy::create(0.5, Vec2(0, 50));
