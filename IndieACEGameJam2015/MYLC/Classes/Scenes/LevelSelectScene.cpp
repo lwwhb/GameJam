@@ -49,7 +49,7 @@ bool LevelSelectScene::init()
     {
         return false;
     }
-    UserDefault::getInstance()->setIntegerForKey("CurrentLevel", 1);
+    //UserDefault::getInstance()->setIntegerForKey("CurrentLevel", 1);
     m_nCurrentLevel = UserDefault::getInstance()->getIntegerForKey("CurrentLevel", 1);
     
     ParticleSystemQuad* starfield= ParticleSystemQuad::create("starfield.plist");
