@@ -36,6 +36,11 @@ bool MenuScene::init()
     {
         return false;
     }
-    
+    m_nCurrentLevel = UserDefault::getInstance()->getIntegerForKey("CurrentLevel", 1);
+    if(m_nCurrentLevel > 6)
+    {
+        m_nCurrentLevel = 1;
+        UserDefault::getInstance()->setIntegerForKey("CurrentLevel", m_nCurrentLevel);
+    }
     return true;
 }

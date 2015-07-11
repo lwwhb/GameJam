@@ -51,7 +51,7 @@ bool LevelSelectScene::init()
     {
         return false;
     }
-    
+    m_nCurrentLevel = UserDefault::getInstance()->getIntegerForKey("CurrentLevel", 1);
     ParticleSystemQuad* starfield= ParticleSystemQuad::create("starfield.plist");
     if(!starfield)
     {
@@ -81,7 +81,7 @@ bool LevelSelectScene::init()
     if(!m_pFront)
         return false;
     m_pCube->addChild(m_pFront);
-        
+    
     m_pTop = CubeFace::create(CubeFace::FT_TOP);
     if(!m_pTop)
         return false;
@@ -107,9 +107,7 @@ bool LevelSelectScene::init()
         return false;
     m_pCube->addChild(m_pDown);
     
-    
 
-    
     m_pCube->setCameraMask((unsigned short)CameraFlag::USER1);
     ///focus
     m_pCube->setAnchorPoint(Vec2::ZERO);
@@ -126,11 +124,14 @@ bool LevelSelectScene::init()
     EaseSineIn* rotateBy5 = EaseSineIn::create(RotateBy::create(1.0f, Vec3(-2,2,2)));
     EaseSineOut* rotateBy6 = EaseSineOut::create(RotateBy::create(1.0f, Vec3(2,-2,-2)));
     
-    Sequence* sequence = Sequence::create(rotateBy1, rotateBy6, rotateBy3, rotateBy4, rotateBy5, rotateBy2, nullptr);
-    RepeatForever* repeat = RepeatForever::create(sequence);
+    Sequence* sequence1 = Sequence::create(rotateBy1, rotateBy6, rotateBy3, rotateBy4, rotateBy5, rotateBy2, nullptr);
+    RepeatForever* repeat = RepeatForever::create(sequence1);
     
     m_pCube->runAction(repeat);
+
     boy->runAction(repeat);
+
+
 
     m_pMainCamera = Camera::create();
     if(!m_pMainCamera)
@@ -154,9 +155,13 @@ bool LevelSelectScene::init()
     if(!m_pWhiteLayer)
         return false;
     m_pWhiteLayer->setPosition(-size.width*0.5f, -size.height*0.5f);
-    m_pWhiteLayer->setOpacity(0);
-    m_pWhiteLayer->setCameraMask((unsigned short)CameraFlag::USER1);
     addChild(m_pWhiteLayer);
+    m_pWhiteLayer->setCameraMask((unsigned short)CameraFlag::USER1);
+    
+    EaseExponentialIn* fadeOut = EaseExponentialIn::create(FadeOut::create(1.0f));
+    CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::beginSelect, this));
+    Sequence* sequence2 = Sequence::create( fadeOut,  callFunc, NULL);
+    m_pWhiteLayer->runAction(sequence2);
     
     auto dispatcher = Director::getInstance()->getEventDispatcher();
     auto touchListener = EventListenerTouchAllAtOnce::create();
@@ -254,26 +259,31 @@ void LevelSelectScene::onTouchesMoved(const std::vector<cocos2d::Touch*>& touche
 void LevelSelectScene::onTouchesEnded(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event *event)
 {
 }
+void LevelSelectScene::beginSelect()
+{
+    
+}
 void LevelSelectScene::beginGame()
 {
     if(m_pCube)
     {
         m_pCube->stopAllActions();
-        RotateBy* rotateBy = RotateBy::create(2.0f, Vec3(0, 360, 0));
-        EaseSineOut* moveTo = EaseSineOut::create(MoveTo::create(2.0f, m_pMainCamera->getPosition3D()-Vec3(0,m_pFront->getRadius()*2,m_pFront->getRadius()*3)));
+        RotateBy* rotateBy = RotateBy::create(1.5f, Vec3(0, 360, 0));
+        EaseSineOut* moveTo = EaseSineOut::create(MoveTo::create(1.5f, m_pMainCamera->getPosition3D()-Vec3(0,m_pFront->getRadius()*2,m_pFront->getRadius()*3)));
         Spawn* spawn = Spawn::create(rotateBy, moveTo, NULL);
         RepeatForever* repeate = RepeatForever::create(spawn);
         m_pCube->runAction(repeate);
     }
     if(m_pWhiteLayer)
     {
-        EaseExponentialOut* fadeIn = EaseExponentialOut::create(FadeIn::create(1.5f));
+        DelayTime* delay = DelayTime::create(0.5f);
+        EaseExponentialOut* fadeIn = EaseExponentialOut::create(FadeIn::create(1.0f));
         CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::startGame, this));
-        Sequence* sequence = Sequence::create( fadeIn,  callFunc, NULL);
+        Sequence* sequence = Sequence::create(delay, fadeIn, callFunc, NULL);
         m_pWhiteLayer->runAction(sequence);
     }
 }
 void LevelSelectScene::startGame()
 {
-    Director::getInstance()->replaceScene( GameScene::createScene());
+    Director::getInstance()->replaceScene(GameScene::createScene());
 }

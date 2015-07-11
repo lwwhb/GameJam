@@ -403,6 +403,8 @@ void GroundLayer::checkWinOrLose()
 {
     if(!m_pCurrentCell)
         return;
+    if(m_pCurrentCell->getType() == GroundCell::CT_NOT)
+        return;
     if(!m_pGameScene)
         return;
     Vector<GroundCell*> neighborCells = getNeighborCells(m_pCurrentCell);

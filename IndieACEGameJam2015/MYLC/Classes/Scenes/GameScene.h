@@ -27,10 +27,14 @@ public:
     virtual void gameWin();
     virtual void gameLose();
     void gameStart();
+    void gameEnd();
+    void jumpToMenu();
+    void jumpToLevelSelect();
 private:
     GroundLayer*                m_pGroundLayer;
     cocos2d::Camera*            m_pMainCamera;
     cocos2d::LayerColor*         m_pWhiteLayer;
+    int                         m_nCurrentLevel;
 };
 
 #endif /* defined(__MYLC__GameScene__) */
