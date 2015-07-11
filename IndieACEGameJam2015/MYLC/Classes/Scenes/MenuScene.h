@@ -25,6 +25,7 @@ public:
     
 private:
     cocos2d::Camera*    m_pMainCamera;
+    int                 m_nCurrentLevel;
 };
 
 #endif /* defined(__MYLC__MenuScene__) */

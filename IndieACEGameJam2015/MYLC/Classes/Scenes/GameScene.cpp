@@ -8,6 +8,8 @@
 
 #include "GameScene.h"
 #include "GroundLayer.h"
+#include "MenuScene.h"
+#include "LevelSelectScene.h"
 USING_NS_CC;
 
 Scene* GameScene::createScene()
@@ -39,12 +41,24 @@ bool GameScene::init()
     {
         return false;
     }
+    m_nCurrentLevel = UserDefault::getInstance()->getIntegerForKey("CurrentLevel", 1);
+    ParticleSystemQuad* starfield= ParticleSystemQuad::create("starfield.plist");
+    if(!starfield)
+    {
+        CCLOG("Load explosion particle system failed! file: starfield.plist");
+        return false;
+    }
+    starfield->setStartSize(5.0f);
+    starfield->setStartSizeVar(3.0f);
+    starfield->setGravity(Vec2(-40.0f, 0));
+    addChild(starfield);
+    
     m_pWhiteLayer = LayerColor::create(Color4B::WHITE);
     if(!m_pWhiteLayer)
         return false;
     addChild(m_pWhiteLayer);
 
-    EaseExponentialIn* fadeOut = EaseExponentialIn::create(FadeOut::create(1.5f));
+    EaseExponentialIn* fadeOut = EaseExponentialIn::create(FadeOut::create(1.0f));
     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(GameScene::gameStart, this));
     Sequence* sequence = Sequence::create( fadeOut,  callFunc, NULL);
     m_pWhiteLayer->runAction(sequence);
@@ -53,14 +67,39 @@ bool GameScene::init()
 void GameScene::gameWin()
 {
     CCLOG("gameWin");
+    m_nCurrentLevel++;
+    UserDefault::getInstance()->setIntegerForKey("CurrentLevel", m_nCurrentLevel);
+    gameEnd();
 }
 void GameScene::gameLose()
 {
     CCLOG("gameLose");
+    gameEnd();
 }
 void GameScene::gameStart()
 {
-    m_pGroundLayer = GroundLayer::create("5x5-6.tmx");
+    switch (m_nCurrentLevel) {
+        case 1:
+            m_pGroundLayer = GroundLayer::create("5x5-1.tmx");
+            break;
+        case 2:
+            m_pGroundLayer = GroundLayer::create("5x5-2.tmx");
+            break;
+        case 3:
+            m_pGroundLayer = GroundLayer::create("5x5-3.tmx");
+            break;
+        case 4:
+            m_pGroundLayer = GroundLayer::create("5x5-4.tmx");
+            break;
+        case 5:
+            m_pGroundLayer = GroundLayer::create("5x5-5.tmx");
+            break;
+        case 6:
+            m_pGroundLayer = GroundLayer::create("5x5-6.tmx");
+            break;
+        default:
+            break;
+    }
     if(!m_pGroundLayer)
         return;
     m_pGroundLayer->setCameraMask((unsigned short)CameraFlag::USER1);
@@ -78,4 +117,37 @@ void GameScene::gameStart()
     m_pGroundLayer->setCamera(m_pMainCamera);
     m_pGroundLayer->setGameScene(this);
 
+}
+void GameScene::gameEnd()
+{
+    if(m_pGroundLayer)
+        m_pGroundLayer->setVisible(false);
+    if(m_nCurrentLevel <= 6)
+    {
+        if(m_pWhiteLayer)
+        {
+            EaseExponentialOut* fadeIn = EaseExponentialOut::create(FadeIn::create(1.0f));
+            CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(GameScene::jumpToLevelSelect, this));
+            Sequence* sequence = Sequence::create( fadeIn, callFunc, NULL);
+            m_pWhiteLayer->runAction(sequence);
+        }
+    }
+    else
+    {
+        if(m_pWhiteLayer)
+        {
+            EaseExponentialOut* fadeIn = EaseExponentialOut::create(FadeIn::create(1.0f));
+            CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(GameScene::jumpToMenu, this));
+            Sequence* sequence = Sequence::create( fadeIn, callFunc, NULL);
+            m_pWhiteLayer->runAction(sequence);
+        }
+    }
+}
+void GameScene::jumpToMenu()
+{
+    Director::getInstance()->replaceScene(MenuScene::createScene());
+}
+void GameScene::jumpToLevelSelect()
+{
+    Director::getInstance()->replaceScene(LevelSelectScene::createScene());
 }
