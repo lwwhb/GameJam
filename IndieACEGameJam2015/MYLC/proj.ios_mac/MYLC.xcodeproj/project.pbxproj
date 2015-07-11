@@ -230,6 +230,22 @@
 		55CFCBCC1B511A3C004C370C /* 1-25.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 55CFCB681B511A2F004C370C /* 1-25.mtl */; };
 		55CFCBCD1B511A3C004C370C /* 1-25.obj in Resources */ = {isa = PBXBuildFile; fileRef = 55CFCB691B511A2F004C370C /* 1-25.obj */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
+		895A94C01B513D1600F55058 /* bboy.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A94BC1B513D1600F55058 /* bboy.mtl */; };
+		895A94C11B513D1600F55058 /* bboy.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A94BC1B513D1600F55058 /* bboy.mtl */; };
+		895A94C21B513D1600F55058 /* bboy.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A94BD1B513D1600F55058 /* bboy.obj */; };
+		895A94C31B513D1600F55058 /* bboy.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A94BD1B513D1600F55058 /* bboy.obj */; };
+		895A94C41B513D1600F55058 /* girl.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A94BE1B513D1600F55058 /* girl.mtl */; };
+		895A94C51B513D1600F55058 /* girl.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A94BE1B513D1600F55058 /* girl.mtl */; };
+		895A94C61B513D1600F55058 /* girl.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A94BF1B513D1600F55058 /* girl.obj */; };
+		895A94C71B513D1600F55058 /* girl.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A94BF1B513D1600F55058 /* girl.obj */; };
+		895A94CC1B513D4E00F55058 /* FZXIANGSU12.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 895A94CB1B513D4E00F55058 /* FZXIANGSU12.TTF */; };
+		895A94CD1B513D4E00F55058 /* FZXIANGSU12.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 895A94CB1B513D4E00F55058 /* FZXIANGSU12.TTF */; };
+		895A94CF1B513D5F00F55058 /* Evenflow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 895A94CE1B513D5F00F55058 /* Evenflow.mp3 */; };
+		895A94D01B513D5F00F55058 /* Evenflow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 895A94CE1B513D5F00F55058 /* Evenflow.mp3 */; };
+		895A94D31B513D7E00F55058 /* Boy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895A94D11B513D7E00F55058 /* Boy.cpp */; };
+		895A94D41B513D7E00F55058 /* Boy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895A94D11B513D7E00F55058 /* Boy.cpp */; };
+		895A94D71B51401C00F55058 /* TextDisplayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895A94D51B51401C00F55058 /* TextDisplayer.cpp */; };
+		895A94D81B51401C00F55058 /* TextDisplayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895A94D51B51401C00F55058 /* TextDisplayer.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -418,6 +434,16 @@
 		55CFCB681B511A2F004C370C /* 1-25.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-25.mtl"; sourceTree = "<group>"; };
 		55CFCB691B511A2F004C370C /* 1-25.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1-25.obj"; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		895A94BC1B513D1600F55058 /* bboy.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy.mtl; sourceTree = "<group>"; };
+		895A94BD1B513D1600F55058 /* bboy.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy.obj; sourceTree = "<group>"; };
+		895A94BE1B513D1600F55058 /* girl.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = girl.mtl; sourceTree = "<group>"; };
+		895A94BF1B513D1600F55058 /* girl.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = girl.obj; sourceTree = "<group>"; };
+		895A94CB1B513D4E00F55058 /* FZXIANGSU12.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZXIANGSU12.TTF; sourceTree = "<group>"; };
+		895A94CE1B513D5F00F55058 /* Evenflow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Evenflow.mp3; sourceTree = "<group>"; };
+		895A94D11B513D7E00F55058 /* Boy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Boy.cpp; sourceTree = "<group>"; };
+		895A94D21B513D7E00F55058 /* Boy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boy.h; sourceTree = "<group>"; };
+		895A94D51B51401C00F55058 /* TextDisplayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextDisplayer.cpp; sourceTree = "<group>"; };
+		895A94D61B51401C00F55058 /* TextDisplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextDisplayer.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -656,6 +682,8 @@
 		556A408F1B50263B00A39E57 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				895A94D11B513D7E00F55058 /* Boy.cpp */,
+				895A94D21B513D7E00F55058 /* Boy.h */,
 				556A40901B50263B00A39E57 /* Arrow.cpp */,
 				556A40911B50263B00A39E57 /* Arrow.h */,
 				556A40921B50263B00A39E57 /* EffectSprite3D.cpp */,
@@ -664,6 +692,8 @@
 				556A40951B50263B00A39E57 /* GroundCell.h */,
 				559A0CE01B50A208005293D1 /* CubeFace.cpp */,
 				559A0CE11B50A208005293D1 /* CubeFace.h */,
+				895A94D51B51401C00F55058 /* TextDisplayer.cpp */,
+				895A94D61B51401C00F55058 /* TextDisplayer.h */,
 			);
 			path = Sprites;
 			sourceTree = "<group>";
@@ -680,6 +710,7 @@
 		556A40A91B50265100A39E57 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				895A94CB1B513D4E00F55058 /* FZXIANGSU12.TTF */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -707,6 +738,10 @@
 		556A40B21B50265100A39E57 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				895A94BC1B513D1600F55058 /* bboy.mtl */,
+				895A94BD1B513D1600F55058 /* bboy.obj */,
+				895A94BE1B513D1600F55058 /* girl.mtl */,
+				895A94BF1B513D1600F55058 /* girl.obj */,
 				55CFCB381B511A2F004C370C /* 1-1.mtl */,
 				55CFCB391B511A2F004C370C /* 1-1.obj */,
 				55CFCB3A1B511A2F004C370C /* 1-2.mtl */,
@@ -782,6 +817,7 @@
 		556A40B91B50265100A39E57 /* music */ = {
 			isa = PBXGroup;
 			children = (
+				895A94CE1B513D5F00F55058 /* Evenflow.mp3 */,
 			);
 			path = music;
 			sourceTree = "<group>";
@@ -927,6 +963,7 @@
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				556A40CF1B50265100A39E57 /* outLine.frag in Resources */,
 				55CFCB941B511A2F004C370C /* 1-22.mtl in Resources */,
+				895A94CF1B513D5F00F55058 /* Evenflow.mp3 in Resources */,
 				55CFCB8E1B511A2F004C370C /* 1-19.mtl in Resources */,
 				55CFCB9B1B511A2F004C370C /* 1-25.obj in Resources */,
 				556A40CA1B50265100A39E57 /* arrow.obj in Resources */,
@@ -950,6 +987,7 @@
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				55CFCB891B511A2F004C370C /* 1-16.obj in Resources */,
 				55CFCB8B1B511A2F004C370C /* 1-17.obj in Resources */,
+				895A94C61B513D1600F55058 /* girl.obj in Resources */,
 				55CFCB701B511A2F004C370C /* 1-4.mtl in Resources */,
 				55CFCB7F1B511A2F004C370C /* 1-11.obj in Resources */,
 				55CFCB771B511A2F004C370C /* 1-7.obj in Resources */,
@@ -958,7 +996,9 @@
 				55CFCB751B511A2F004C370C /* 1-6.obj in Resources */,
 				55CFCB7A1B511A2F004C370C /* 1-9.mtl in Resources */,
 				559A0CC71B50A0BA005293D1 /* 2.mtl in Resources */,
+				895A94C01B513D1600F55058 /* bboy.mtl in Resources */,
 				556A40C51B50265100A39E57 /* 5x5-3.tmx in Resources */,
+				895A94C41B513D1600F55058 /* girl.mtl in Resources */,
 				55CFCB901B511A2F004C370C /* 1-20.mtl in Resources */,
 				55CFCB9A1B511A2F004C370C /* 1-25.mtl in Resources */,
 				55CFCB7B1B511A2F004C370C /* 1-9.obj in Resources */,
@@ -989,6 +1029,7 @@
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				556A40C71B50265100A39E57 /* 5x5-5.tmx in Resources */,
 				55CFCB961B511A2F004C370C /* 1-23.mtl in Resources */,
+				895A94CC1B513D4E00F55058 /* FZXIANGSU12.TTF in Resources */,
 				559A0CCD1B50A0BA005293D1 /* 5.mtl in Resources */,
 				55CFCB8A1B511A2F004C370C /* 1-17.mtl in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
@@ -996,6 +1037,7 @@
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				55CFCB6C1B511A2F004C370C /* 1-2.mtl in Resources */,
 				55CFCB6F1B511A2F004C370C /* 1-3.obj in Resources */,
+				895A94C21B513D1600F55058 /* bboy.obj in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				55CFCB981B511A2F004C370C /* 1-24.mtl in Resources */,
@@ -1038,6 +1080,7 @@
 				55CFCBA81B511A3C004C370C /* 1-7.mtl in Resources */,
 				55CFCBA91B511A3C004C370C /* 1-7.obj in Resources */,
 				55CFCBAA1B511A3C004C370C /* 1-8.mtl in Resources */,
+				895A94C31B513D1600F55058 /* bboy.obj in Resources */,
 				55CFCBAB1B511A3C004C370C /* 1-8.obj in Resources */,
 				55CFCBAC1B511A3C004C370C /* 1-9.mtl in Resources */,
 				55CFCBAD1B511A3C004C370C /* 1-9.obj in Resources */,
@@ -1046,9 +1089,11 @@
 				55CFCBB01B511A3C004C370C /* 1-11.mtl in Resources */,
 				55CFCBB11B511A3C004C370C /* 1-11.obj in Resources */,
 				55CFCBB21B511A3C004C370C /* 1-12.mtl in Resources */,
+				895A94D01B513D5F00F55058 /* Evenflow.mp3 in Resources */,
 				55CFCBB31B511A3C004C370C /* 1-12.obj in Resources */,
 				55CFCBB41B511A3C004C370C /* 1-13.mtl in Resources */,
 				55CFCBB51B511A3C004C370C /* 1-13.obj in Resources */,
+				895A94C71B513D1600F55058 /* girl.obj in Resources */,
 				55CFCBB61B511A3C004C370C /* 1-14.mtl in Resources */,
 				55CFCBB71B511A3C004C370C /* 1-14.obj in Resources */,
 				55CFCBB81B511A3C004C370C /* 1-15.mtl in Resources */,
@@ -1059,6 +1104,8 @@
 				55CFCBBD1B511A3C004C370C /* 1-17.obj in Resources */,
 				55CFCBBE1B511A3C004C370C /* 1-18.mtl in Resources */,
 				55CFCBBF1B511A3C004C370C /* 1-18.obj in Resources */,
+				895A94C51B513D1600F55058 /* girl.mtl in Resources */,
+				895A94C11B513D1600F55058 /* bboy.mtl in Resources */,
 				55CFCBC01B511A3C004C370C /* 1-19.mtl in Resources */,
 				55CFCBC11B511A3C004C370C /* 1-19.obj in Resources */,
 				55CFCBC21B511A3C004C370C /* 1-20.mtl in Resources */,
@@ -1092,6 +1139,7 @@
 				556A40FC1B502A1B00A39E57 /* platform.obj in Resources */,
 				556A40F01B50269000A39E57 /* colorlist.png in Resources */,
 				556A40F11B50269000A39E57 /* IndexColor.png in Resources */,
+				895A94CD1B513D4E00F55058 /* FZXIANGSU12.TTF in Resources */,
 				556A40EE1B50268700A39E57 /* outLine.frag in Resources */,
 				556A40EF1B50268700A39E57 /* outLine.vert in Resources */,
 				556A40E81B50267F00A39E57 /* arrow.mtl in Resources */,
@@ -1115,7 +1163,9 @@
 			files = (
 				556A409D1B50263B00A39E57 /* BaseEffect3D.cpp in Sources */,
 				556A40A41B50263B00A39E57 /* Arrow.cpp in Sources */,
+				895A94D31B513D7E00F55058 /* Boy.cpp in Sources */,
 				556A40A61B50263B00A39E57 /* GroundCell.cpp in Sources */,
+				895A94D71B51401C00F55058 /* TextDisplayer.cpp in Sources */,
 				556A40A81B50263B00A39E57 /* UtilityHelper.cpp in Sources */,
 				556A40A31B50263B00A39E57 /* MenuScene.cpp in Sources */,
 				556A40A51B50263B00A39E57 /* EffectSprite3D.cpp in Sources */,
@@ -1139,6 +1189,8 @@
 				559A0CE31B50A553005293D1 /* CubeFace.cpp in Sources */,
 				556A40D41B50266B00A39E57 /* AppDelegate.cpp in Sources */,
 				556A40D61B50266B00A39E57 /* BaseEffect3D.cpp in Sources */,
+				895A94D41B513D7E00F55058 /* Boy.cpp in Sources */,
+				895A94D81B51401C00F55058 /* TextDisplayer.cpp in Sources */,
 				556A40D71B50266B00A39E57 /* OutlineEffect3D.cpp in Sources */,
 				556A40D81B50266B00A39E57 /* GroundLayer.cpp in Sources */,
 				556A40D91B50266B00A39E57 /* GameScene.cpp in Sources */,

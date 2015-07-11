@@ -68,6 +68,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // create a scene. it's an autorelease object
     auto scene = LevelSelectScene::createScene();
     SimpleAudioEngine::getInstance()->preloadBackgroundMusic("Evenflow.mp3");
+    SimpleAudioEngine::getInstance()->playBackgroundMusic("Evenflow.mp3",true);
+    // return the scene
     // run
     director->runWithScene(scene);
 

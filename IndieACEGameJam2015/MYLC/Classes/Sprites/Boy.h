@@ -14,7 +14,6 @@
 
 class Boy : public EffectSprite3D
 {
-public:
 
 protected:
     Boy();

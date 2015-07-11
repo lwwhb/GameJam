@@ -11,6 +11,7 @@
 #include "UtilityHelper.h"
 #include "GameScene.h"
 #include "SimpleAudioEngine.h"
+#include <vector>
 
 USING_NS_CC;
 using namespace CocosDenshion;
@@ -25,8 +26,7 @@ Scene* LevelSelectScene::createScene()
     
     // add layer as a child to scene
     scene->addChild(layer);
-    SimpleAudioEngine::getInstance()->playBackgroundMusic("Evenflow.mp3",true);
-    // return the scene
+
     return scene;
 }
 LevelSelectScene::LevelSelectScene()
@@ -66,10 +66,111 @@ bool LevelSelectScene::init()
     //lixu add boy
     boy = Boy::create();
     addChild(boy);
-    boy->setScale(2.0f);
-    boy->setPosition3D(Vec3(150,200,0));
+    boy->setPosition3D(Vec3(-90,-100,-120));
+    boy->setCameraMask((unsigned short)CameraFlag::USER1);
     
-    text = Label::create();
+
+    
+    
+    auto la = Label::createWithTTF("", "FZXIANGSU12.TTF", 24);
+    la->setString("");
+    auto bill = BillBoard::create();
+    bill->addChild(la);
+    addChild(bill);
+    bill->setPosition(300, 300);
+    std::vector<std::string> texts;
+
+    switch (m_nCurrentLevel) {
+        case 0:
+            texts.clear();
+            texts.push_back("……………………");
+            texts.push_back("…………我…………");
+            texts.push_back("“我”诞生了");
+            texts.push_back("……周围……是世界？");
+            texts.push_back("“世界”诞生了");
+            texts.push_back("前面是什么？");
+            texts.push_back("我该做点什么？");
+            texts.push_back("也许我该到那里去？");
+            break;
+        case 1:
+            texts.clear();
+            texts.push_back("……………………");
+            texts.push_back("温暖的感觉");
+            texts.push_back("“世界”也变化了");
+            texts.push_back("这些……是“色彩”");
+            texts.push_back("“我”……“世界……“色彩”");
+            texts.push_back("也许这就是我该做的");
+            texts.push_back("也许我该再到那里去");
+            texts.push_back("会有新的“色彩”么？");
+            break;
+
+        case 2:
+            texts.clear();
+            texts.push_back("……………………");
+            texts.push_back("我找到了新的”色彩“");
+            texts.push_back("我感到……平静……");
+            texts.push_back("…………我明白了…………");
+            texts.push_back("“世界”诞生了");
+            texts.push_back("“我”诞生了");
+            texts.push_back("“世界”和“我”都需要“色彩”");
+            texts.push_back("“我”要给“世界”找到“色彩“");
+            texts.push_back("我要再到那里去");
+
+            break;
+        case 3:
+            texts.clear();
+            texts.push_back("哈哈哈");
+            texts.push_back("果然，果然");
+            texts.push_back("新的“色彩”！");
+            texts.push_back("“我”活了");
+            texts.push_back("“世界”活了");
+            texts.push_back("活着真好");
+            texts.push_back("到那里去，到那里去");
+            texts.push_back("寻找，寻找色彩");
+            break;
+        case 4:
+            texts.clear();
+            texts.push_back("我又找到了一些");
+            texts.push_back("很美");
+            texts.push_back("…………很美…………");
+            texts.push_back("然而为什么");
+            texts.push_back("为什么我却感觉失落");
+            texts.push_back("为什么？");
+            texts.push_back("“我”拥有“世界”");
+            texts.push_back("“世界”有了”色彩“");
+            texts.push_back("一定还有什么，我没找到的");
+            texts.push_back("我要再去那里寻找");
+            texts.push_back("寻找，直到找到为止");
+            break;
+        case 5:
+            texts.clear();
+            texts.push_back("够了");
+            texts.push_back("我累了");
+            texts.push_back("“我”很好");
+            texts.push_back("“我”很好");
+            texts.push_back("我为什么还要去那儿");
+            texts.push_back("一次又一次");
+            texts.push_back("找到了“色彩”");
+            texts.push_back("改变了“世界”");
+            texts.push_back("为什么？");
+            texts.push_back("“我”还是“我”");
+            texts.push_back("“世界”还是“世界”");
+            texts.push_back("还要再去那里吧");
+            texts.push_back("还能去哪儿呢");
+            break;
+            
+        default:
+            break;
+    }
+    
+
+    
+    text = TextDisplayer::create();
+    addChild(text);
+    text->setLabel(la);
+
+    text->setTextToDisplay(texts);
+    text->startTyping();
     
     
     //+lixu
@@ -114,6 +215,7 @@ bool LevelSelectScene::init()
     addChild(m_pCube);
     m_pCube->setPosition3D(Vec3(30,0,0));
     m_pCube->setRotation3D(Vec3(0,20,0));
+    boy->setRotation3D(Vec3(-10, 10, 5));
     
     EaseSineIn* rotateBy1 = EaseSineIn::create(RotateBy::create(1.0f, Vec3(2,-2,2)));
     EaseSineOut* rotateBy2 = EaseSineOut::create(RotateBy::create(1.0f, Vec3(-2,2,-2)));

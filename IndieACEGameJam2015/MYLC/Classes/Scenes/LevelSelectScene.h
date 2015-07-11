@@ -12,6 +12,7 @@
 #include "cocos2d.h"
 #include "CubeFace.h"
 #include "Boy.h"
+#include "TextDisplayer.h"
 
 class LevelSelectScene : public cocos2d::Layer
 {
@@ -52,7 +53,7 @@ private:
     cocos2d::LayerColor*         m_pWhiteLayer;
 
     Boy *boy;
-    cocos2d::Label* text;
+    TextDisplayer* text;
 
     int                 m_nCurrentLevel;
 
