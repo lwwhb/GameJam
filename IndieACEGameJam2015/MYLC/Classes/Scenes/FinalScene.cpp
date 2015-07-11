@@ -311,6 +311,6 @@ bool FinalScene::init()
 }
 bool FinalScene::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *unused_event)
 {
-    Director::getInstance()->replaceScene(MenuScene::createScene());
+    //Director::getInstance()->replaceScene(MenuScene::createScene());
     return true;
 }
