@@ -795,7 +795,7 @@ void LevelSelectScene::girlDisplay()
     addChild(girl);
     girl->setCameraMask((unsigned short)CameraFlag::USER1);
     girl->setPosition3D(Vec3(30,0,0));
-    girl->setScale(0.5);
+    girl->setScale(0.4f);
     
     std::vector<std::string> texts;
     texts.push_back("哇…………");
