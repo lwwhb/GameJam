@@ -12,6 +12,7 @@
 #include "GameScene.h"
 #include "SimpleAudioEngine.h"
 #include <vector>
+#include "FinalScene.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;
@@ -161,8 +162,21 @@ bool LevelSelectScene::init()
             texts.push_back("还要再去那里吧");
             texts.push_back("还能去哪儿呢");
             break;
+        case 7:
+            texts.clear();
+            texts.push_back("啊………………");
+            texts.push_back("发生了了什么？");
+            texts.push_back("另一个……“我”？");
+            texts.push_back("不，是……“她”？");
             
         default:
+            texts.clear();
+            texts.push_back("啊………………");
+            texts.push_back("发生了什么？");
+            texts.push_back("虽然只是一瞬间");
+            texts.push_back("但是“世界”除了表面");
+            texts.push_back("似乎还有别的什么");
+            texts.push_back("让我来看一看");
             break;
     }
     
@@ -773,5 +787,35 @@ void LevelSelectScene::girlDisplay()
         Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
         m_pDown->runAction(sequnce);
     }
+    
+    auto girl = EffectSprite3D::create("girl.obj", "IndexColor.png");
+    if (!girl) {
+        return;
+    }
+    addChild(girl);
+    girl->setCameraMask((unsigned short)CameraFlag::USER1);
+    girl->setPosition3D(Vec3(30,0,0));
+    girl->setScale(0.4f);
+    
+    std::vector<std::string> texts;
+    texts.push_back("哇…………");
+    texts.push_back("这是……");
+    texts.push_back("另一个……“我”？");
+    texts.push_back("不，是……“她”？");
+    texts.push_back("熟悉而亲切的感觉");
+    texts.push_back("似乎是很久以前……");
+    texts.push_back("先……打个招呼吧");
+    text->setTextToDisplay(texts);
+    text->startTyping();
+    CallFunc* finalCall = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::gotoFinal, this));
+    DelayTime* delay = DelayTime::create(20.0f);
+    Sequence* changeScene = Sequence::createWithTwoActions(delay, finalCall);
+    this->runAction(changeScene);
 
+}
+
+void LevelSelectScene::gotoFinal()
+{
+    auto scene = FinalScene::createScene();
+    Director::getInstance()->replaceScene(scene);
 }

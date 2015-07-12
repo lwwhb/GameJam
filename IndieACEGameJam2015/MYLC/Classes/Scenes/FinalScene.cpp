@@ -88,16 +88,25 @@ bool FinalScene::init()
     
     
     
-    auto text = TextDisplayer::create();
+    text = TextDisplayer::create();
     addChild(text);
     text->setLabel(la);
     
     text->setTextToDisplay(texts);
     text->startTyping();
+    CallFunc* finalCall = CallFunc::create(CC_CALLBACK_0(FinalScene::stuffText, this));
+    DelayTime* textdelay = DelayTime::create(35.0f);
+    Sequence* strartStuff = Sequence::createWithTwoActions(textdelay, finalCall);
+    this->runAction(strartStuff);
+    
     
     auto size = Director::getInstance()->getVisibleSize();
     auto bgLayerColor =   LayerColor::create(Color4B(153, 204, 255, 255),size.width,size.height);
     addChild(bgLayerColor);
+    
+    auto groundLayer = LayerColor::create(Color4B(160, 95, 0, 255),size.width,size.height/3);
+    addChild(groundLayer);
+    
     
     m_pSun = EffectSprite3D::create("sun.obj", "IndexColor.png");
     if(!m_pSun)
@@ -340,9 +349,12 @@ bool FinalScene::init()
     EaseExponentialIn* fadeOut1 = EaseExponentialIn::create(FadeOut::create(1.0f));
     m_pWhiteLayer->runAction(fadeOut1);
     
+
+    
     auto listener = EventListenerTouchOneByOne::create();
     listener->onTouchBegan = CC_CALLBACK_2(FinalScene::onTouchBegan, this);
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
+    
     
     return true;
 }
@@ -350,4 +362,18 @@ bool FinalScene::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *unused_even
 {
     //Director::getInstance()->replaceScene(MenuScene::createScene());
     return true;
+}
+
+void FinalScene::stuffText()
+{
+    std::vector<std::string> texts;
+    texts.push_back("开发组成员：");
+    texts.push_back("————王海波——程序美术策划————");
+    texts.push_back("————李创——程序美术策划————");
+    texts.push_back("————李旭——程序美术策划————");
+    texts.push_back("谢谢试玩");
+    texts.push_back("二零一五年七月");
+    
+    text->setTextToDisplay(texts);
+    text->startTyping();
 }

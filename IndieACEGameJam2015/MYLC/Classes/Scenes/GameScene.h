@@ -11,6 +11,7 @@
 
 #include "cocos2d.h"
 #include "Boy.h"
+#include "TextDisplayer.h"
 
 class GroundLayer;
 class GameScene : public cocos2d::Layer
@@ -28,6 +29,8 @@ public:
     
     virtual void gameWin();
     virtual void gameLose();
+    virtual void winText();
+    virtual void loseText();
     void gameStart();
     void gameEnd();
     void jumpToMenu();
@@ -38,6 +41,7 @@ private:
     cocos2d::LayerColor*        m_pWhiteLayer;
     int                         m_nCurrentLevel;
     Boy* m_boy;
+    TextDisplayer* text;
 };
 
 #endif /* defined(__MYLC__GameScene__) */

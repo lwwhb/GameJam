@@ -439,16 +439,23 @@ void GroundLayer::checkWinOrLose()
         if(m_pGift)
         {
             EaseBackInOut* scaleTo = EaseBackInOut::create(ScaleTo::create(1.0f, 1.8f));
-            DelayTime* delay = DelayTime::create(3.0f);
+            DelayTime* delay = DelayTime::create(4.0f);
             CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(GameScene::gameWin,m_pGameScene));
-            Sequence* sequence = Sequence::create(scaleTo, delay, callFunc, NULL);
+            CallFunc* callFunc1 = CallFunc::create(CC_CALLBACK_0(GameScene::winText,m_pGameScene));
+            Sequence* sequence = Sequence::create(callFunc1,scaleTo, delay, callFunc, NULL);
             m_pGift->runAction(sequence);
             CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("life.mp3");
         }
     }
     else
     {
-        m_pGameScene->gameLose();
+        //m_pGameScene->gameLose();
+        EaseBackInOut* scaleTo = EaseBackInOut::create(ScaleTo::create(1.0f, 0.0f));
+        DelayTime* delay = DelayTime::create(4.0f);
+        CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(GameScene::gameLose,m_pGameScene));
+        CallFunc* callFunc1 = CallFunc::create(CC_CALLBACK_0(GameScene::loseText,m_pGameScene));
+        Sequence* sequence = Sequence::create(callFunc1,scaleTo, delay, callFunc, NULL);
+        this->runAction(sequence);
     }
     
 }

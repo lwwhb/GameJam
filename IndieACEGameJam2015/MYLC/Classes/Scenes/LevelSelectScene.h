@@ -42,6 +42,8 @@ private:
     void startGame();
     void enableTouch();
     void girlDisplay();
+    void gotoFinal();
+    
 private:
     cocos2d::Camera*    m_pMainCamera;
     cocos2d::Node*      m_pCube;

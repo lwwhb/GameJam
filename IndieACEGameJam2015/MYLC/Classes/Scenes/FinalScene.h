@@ -12,6 +12,8 @@
 #include "cocos2d.h"
 
 #include "EffectSprite3D.h"
+#include "TextDisplayer.h"
+
 class FinalScene : public cocos2d::Layer
 {
     FinalScene();
@@ -26,6 +28,7 @@ public:
     CREATE_FUNC(FinalScene);
     
     virtual bool onTouchBegan(cocos2d::Touch *touch,cocos2d::Event *unused_event);
+    void stuffText();
     
 private:
     cocos2d::Camera*                m_pMainCamera;
@@ -50,6 +53,7 @@ private:
     EffectSprite3D*                 m_pGirl;
 
     EffectSprite3D*                 m_pHeart;
+    TextDisplayer* text;
 };
 
 #endif /* defined(__MYLC__FinalScene__) */
