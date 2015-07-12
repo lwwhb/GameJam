@@ -149,7 +149,7 @@ bool GameScene::init()
             break;
     }
     
-    auto text = TextDisplayer::create();
+    text = TextDisplayer::create();
     addChild(text);
     text->setLabel(la);
     
@@ -252,4 +252,22 @@ void GameScene::jumpToMenu()
 void GameScene::jumpToLevelSelect()
 {
     Director::getInstance()->replaceScene(LevelSelectScene::createScene());
+}
+
+void GameScene::winText()
+{
+    std::vector<std::string> texts;
+    texts.push_back("成功了");
+    texts.push_back("有新的发现了");
+    text->setTextToDisplay(texts);
+    text->startTyping();
+}
+
+void GameScene::loseText()
+{
+    std::vector<std::string> texts;
+    texts.push_back("糟糕");
+    texts.push_back("有些地方探索不到了");
+    text->setTextToDisplay(texts);
+    text->startTyping();
 }
