@@ -76,6 +76,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     SimpleAudioEngine::getInstance()->preloadEffect("start.mp3");
     SimpleAudioEngine::getInstance()->preloadEffect("stoneroll.wav");
     SimpleAudioEngine::getInstance()->preloadEffect("stoneflip.wav");
+    SimpleAudioEngine::getInstance()->setEffectsVolume(0.5);
     // run
     director->runWithScene(scene);
 
