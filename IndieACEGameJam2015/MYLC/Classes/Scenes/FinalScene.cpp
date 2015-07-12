@@ -8,7 +8,10 @@
 
 #include "FinalScene.h"
 #include "MenuScene.h"
+#include "SimpleAudioEngine.h"
+#include "TextDisplayer.h"
 USING_NS_CC;
+using namespace CocosDenshion;
 
 Scene* FinalScene::createScene()
 {
@@ -57,6 +60,40 @@ bool FinalScene::init()
     {
         return false;
     }
+    
+    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+    SimpleAudioEngine::getInstance()->playBackgroundMusic("Horizon.mp3",true);
+    
+    auto la = Label::createWithTTF("", "FZXIANGSU12.TTF", 24);
+    la->setString("");
+    auto bill = BillBoard::create();
+    bill->addChild(la);
+    addChild(bill);
+    bill->setPosition(570, 300);
+    bill->setCameraMask((unsigned short)CameraFlag::USER1);
+    
+    std::vector<std::string> texts;
+    
+    texts.clear();
+    texts.push_back("“你好……”");
+    texts.push_back("“你好……你知道嘛，我发现了一个世界呢”");
+    texts.push_back("“真的么？我也是”");
+    texts.push_back("也许从这一刻开始");
+    texts.push_back("两个世界才真正获得了色彩");
+    texts.push_back("两个世界交织在一起");
+    texts.push_back("变成了一个色彩斑斓的新世界");
+    texts.push_back("男孩和女孩都没有再说话");
+    texts.push_back("此刻两个人心里想的是");
+    texts.push_back("“终于找到了”");
+    
+    
+    
+    auto text = TextDisplayer::create();
+    addChild(text);
+    text->setLabel(la);
+    
+    text->setTextToDisplay(texts);
+    text->startTyping();
     
     auto size = Director::getInstance()->getVisibleSize();
     auto bgLayerColor =   LayerColor::create(Color4B(153, 204, 255, 255),size.width,size.height);

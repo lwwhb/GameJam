@@ -30,7 +30,7 @@ Boy* Boy::create(int level)
             break;
             
         default:
-            bRet = boy->initWithFile("bboy.obj");
+            bRet = boy->initWithFile("bboy_nosmile.obj");
             break;
     }
     
