@@ -10,6 +10,7 @@
 #define __Geometry_Wars__BaseEffect3D__
 
 #include "cocos2d.h"
+
 class EffectSprite3D;
 class BaseEffect3D : public cocos2d::Ref
 {
@@ -26,7 +27,7 @@ protected:
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     std::string     m_strVertSource;
     std::string     m_strFragSource;
-    EventListenerCustom* m_pBackgroundListener;
+    cocos2d::EventListenerCustom* m_pBackgroundListener;
 #endif
 };
 
