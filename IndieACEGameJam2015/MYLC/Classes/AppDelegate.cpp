@@ -75,6 +75,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     SimpleAudioEngine::getInstance()->preloadEffect("start.mp3");
 
     SimpleAudioEngine::getInstance()->preloadBackgroundMusic("Horizon.mp3");
+    
+    SimpleAudioEngine::getInstance()->setEffectsVolume(0.5);
     // run
     director->runWithScene(scene);
 

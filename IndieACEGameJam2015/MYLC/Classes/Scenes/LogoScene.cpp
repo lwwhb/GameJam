@@ -51,7 +51,7 @@ bool LogoScene::init()
     
     
     size = Director::getInstance()->getVisibleSize();
-    float scale = size.width / 960.0f;
+    //float scale = size.width / 960.0f;
     
     auto bgLayerColor =   LayerColor::create(Color4B::WHITE,size.width,size.height);
     addChild(bgLayerColor);
@@ -62,16 +62,16 @@ bool LogoScene::init()
     colOne  = LayerColor::create(Color4B::BLACK,50,size.height);
     colTwo = LayerColor::create(Color4B::BLACK,50,size.height);
     
-    rowOne->setPosition(-size.height,size.height*0.7);
+    rowOne->setPosition(-size.width,size.height*0.7);
     rowTwo->setPosition(size.width,size.height*0.3);
     colOne->setPosition(size.width*0.3 ,-size.height);
     colTwo->setPosition(size.width * 0.6,size.height);
 
 
-    rowOne->setScale(scale);
-    rowTwo->setScale(scale);
-    colOne->setScale(scale);
-    colTwo->setScale(scale);
+//    rowOne->setScale(scale);
+//    rowTwo->setScale(scale);
+//    colOne->setScale(scale);
+//    colTwo->setScale(scale);
     
     addChild(rowOne);
     addChild(rowTwo);
@@ -79,20 +79,20 @@ bool LogoScene::init()
     addChild(colTwo);
     
     tinyFlareSprite = Sprite::create("tinyflare.png");
-    tinyFlareSprite->setPosition(size.width/2,size.height/2+50);
+    tinyFlareSprite->setPosition(size.width/2,size.height*0.6);
     addChild(tinyFlareSprite);
     tinyFlareSprite->setOpacity(0);
     
     gamejamMarkSprite = Sprite::create("indiace.png");
     gamejamMarkSprite->setPosition(size.width/2,size.height/2-tinyFlareSprite->getContentSize().height*0.5 );
-    gamejamMarkSprite->setScale(scale);
+    //gamejamMarkSprite->setScale(scale);
     gamejamMarkSprite->setOpacity(0);
     addChild(gamejamMarkSprite);
     
     
     dateMarkSprite = Sprite::create("2015.png");
-    dateMarkSprite->setPosition(size.width/2,size.height/2);
-    dateMarkSprite->setScale(scale);
+    dateMarkSprite->setPosition(size.width/2,size.height*0.5);
+    //dateMarkSprite->setScale(scale);
     dateMarkSprite->setOpacity(0);
     addChild(dateMarkSprite);
     
@@ -173,7 +173,7 @@ void LogoScene::endcache()
 {
     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LogoScene::logoActon, this));
     auto gamejamFadeInAction = FadeIn::create(2);
-    auto gamejamMoveAction = MoveBy::create(0.5, Vec2(0,-50));
+    auto gamejamMoveAction = MoveBy::create(0.5, Vec2(0,-60));
     if (gamejamMarkSprite) {
         gamejamMarkSprite->runAction(Sequence::create(gamejamFadeInAction,gamejamMoveAction,callFunc, NULL));
     }
