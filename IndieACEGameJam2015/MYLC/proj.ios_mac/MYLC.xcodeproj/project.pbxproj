@@ -190,6 +190,30 @@
 		895A94F41B51A7F500F55058 /* TextDisplayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895A94F01B51A7F500F55058 /* TextDisplayer.cpp */; };
 		895A94F51B51A7F500F55058 /* Boy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895A94F21B51A7F500F55058 /* Boy.cpp */; };
 		895A94F61B51A7F500F55058 /* Boy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895A94F21B51A7F500F55058 /* Boy.cpp */; };
+		895A95181B51C8DE00F55058 /* bboy_1.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A95101B51C8DE00F55058 /* bboy_1.mtl */; };
+		895A95191B51C8DE00F55058 /* bboy_1.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A95101B51C8DE00F55058 /* bboy_1.mtl */; };
+		895A951A1B51C8DE00F55058 /* bboy_1.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A95111B51C8DE00F55058 /* bboy_1.obj */; };
+		895A951B1B51C8DE00F55058 /* bboy_1.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A95111B51C8DE00F55058 /* bboy_1.obj */; };
+		895A951C1B51C8DE00F55058 /* bboy_2.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A95121B51C8DE00F55058 /* bboy_2.mtl */; };
+		895A951D1B51C8DE00F55058 /* bboy_2.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A95121B51C8DE00F55058 /* bboy_2.mtl */; };
+		895A951E1B51C8DE00F55058 /* bboy_2.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A95131B51C8DE00F55058 /* bboy_2.obj */; };
+		895A951F1B51C8DE00F55058 /* bboy_2.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A95131B51C8DE00F55058 /* bboy_2.obj */; };
+		895A95201B51C8DE00F55058 /* bboy_3.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A95141B51C8DE00F55058 /* bboy_3.mtl */; };
+		895A95211B51C8DE00F55058 /* bboy_3.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A95141B51C8DE00F55058 /* bboy_3.mtl */; };
+		895A95221B51C8DE00F55058 /* bboy_3.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A95151B51C8DE00F55058 /* bboy_3.obj */; };
+		895A95231B51C8DE00F55058 /* bboy_3.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A95151B51C8DE00F55058 /* bboy_3.obj */; };
+		895A95241B51C8DE00F55058 /* bboy_4.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A95161B51C8DE00F55058 /* bboy_4.mtl */; };
+		895A95251B51C8DE00F55058 /* bboy_4.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A95161B51C8DE00F55058 /* bboy_4.mtl */; };
+		895A95261B51C8DE00F55058 /* bboy_4.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A95171B51C8DE00F55058 /* bboy_4.obj */; };
+		895A95271B51C8DE00F55058 /* bboy_4.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A95171B51C8DE00F55058 /* bboy_4.obj */; };
+		895A95291B51F84100F55058 /* Lightontheland.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 895A95281B51F84100F55058 /* Lightontheland.mp3 */; };
+		895A952A1B51F84100F55058 /* Lightontheland.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 895A95281B51F84100F55058 /* Lightontheland.mp3 */; };
+		895A952C1B51F8B200F55058 /* Horizon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 895A952B1B51F8B200F55058 /* Horizon.mp3 */; };
+		895A952D1B51F8B200F55058 /* Horizon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 895A952B1B51F8B200F55058 /* Horizon.mp3 */; };
+		895A95301B52007700F55058 /* bboy_nosmile.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A952E1B52007700F55058 /* bboy_nosmile.mtl */; };
+		895A95311B52007700F55058 /* bboy_nosmile.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 895A952E1B52007700F55058 /* bboy_nosmile.mtl */; };
+		895A95321B52007700F55058 /* bboy_nosmile.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A952F1B52007700F55058 /* bboy_nosmile.obj */; };
+		895A95331B52007700F55058 /* bboy_nosmile.obj in Resources */ = {isa = PBXBuildFile; fileRef = 895A952F1B52007700F55058 /* bboy_nosmile.obj */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -376,6 +400,18 @@
 		895A94F01B51A7F500F55058 /* TextDisplayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextDisplayer.cpp; sourceTree = "<group>"; };
 		895A94F11B51A7F500F55058 /* TextDisplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextDisplayer.h; sourceTree = "<group>"; };
 		895A94F21B51A7F500F55058 /* Boy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Boy.cpp; sourceTree = "<group>"; };
+		895A95101B51C8DE00F55058 /* bboy_1.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy_1.mtl; sourceTree = "<group>"; };
+		895A95111B51C8DE00F55058 /* bboy_1.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy_1.obj; sourceTree = "<group>"; };
+		895A95121B51C8DE00F55058 /* bboy_2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy_2.mtl; sourceTree = "<group>"; };
+		895A95131B51C8DE00F55058 /* bboy_2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy_2.obj; sourceTree = "<group>"; };
+		895A95141B51C8DE00F55058 /* bboy_3.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy_3.mtl; sourceTree = "<group>"; };
+		895A95151B51C8DE00F55058 /* bboy_3.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy_3.obj; sourceTree = "<group>"; };
+		895A95161B51C8DE00F55058 /* bboy_4.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy_4.mtl; sourceTree = "<group>"; };
+		895A95171B51C8DE00F55058 /* bboy_4.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy_4.obj; sourceTree = "<group>"; };
+		895A95281B51F84100F55058 /* Lightontheland.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Lightontheland.mp3; sourceTree = "<group>"; };
+		895A952B1B51F8B200F55058 /* Horizon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Horizon.mp3; sourceTree = "<group>"; };
+		895A952E1B52007700F55058 /* bboy_nosmile.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy_nosmile.mtl; sourceTree = "<group>"; };
+		895A952F1B52007700F55058 /* bboy_nosmile.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bboy_nosmile.obj; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -681,6 +717,16 @@
 		556A40B21B50265100A39E57 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				895A952E1B52007700F55058 /* bboy_nosmile.mtl */,
+				895A952F1B52007700F55058 /* bboy_nosmile.obj */,
+				895A95101B51C8DE00F55058 /* bboy_1.mtl */,
+				895A95111B51C8DE00F55058 /* bboy_1.obj */,
+				895A95121B51C8DE00F55058 /* bboy_2.mtl */,
+				895A95131B51C8DE00F55058 /* bboy_2.obj */,
+				895A95141B51C8DE00F55058 /* bboy_3.mtl */,
+				895A95151B51C8DE00F55058 /* bboy_3.obj */,
+				895A95161B51C8DE00F55058 /* bboy_4.mtl */,
+				895A95171B51C8DE00F55058 /* bboy_4.obj */,
 				895A94E01B51A7A800F55058 /* bboy.mtl */,
 				895A94E11B51A7A800F55058 /* bboy.obj */,
 				895A94E21B51A7A800F55058 /* girl.mtl */,
@@ -730,6 +776,8 @@
 		556A40B91B50265100A39E57 /* music */ = {
 			isa = PBXGroup;
 			children = (
+				895A952B1B51F8B200F55058 /* Horizon.mp3 */,
+				895A95281B51F84100F55058 /* Lightontheland.mp3 */,
 				895A94EC1B51A7B700F55058 /* Evenflow.mp3 */,
 			);
 			path = music;
@@ -882,6 +930,7 @@
 				5568E9871B5191A600D3A6E7 /* flower.obj in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				895A94E41B51A7A800F55058 /* bboy.mtl in Resources */,
+				895A95321B52007700F55058 /* bboy_nosmile.obj in Resources */,
 				EC7D86FD1B5133CF00EF37CC /* tinyflare.png in Resources */,
 				5568E99C1B5191B000D3A6E7 /* platform1.mtl in Resources */,
 				5568E9A11B5191B000D3A6E7 /* platform3.obj in Resources */,
@@ -898,14 +947,18 @@
 				5568E9A21B5191B000D3A6E7 /* platform4.mtl in Resources */,
 				EC7D87101B515E0D00EF37CC /* colorful.png in Resources */,
 				5568E99E1B5191B000D3A6E7 /* platform2.mtl in Resources */,
+				895A95291B51F84100F55058 /* Lightontheland.mp3 in Resources */,
 				5568E98A1B5191A600D3A6E7 /* house.mtl in Resources */,
 				5568E9A61B5191B000D3A6E7 /* platform6.mtl in Resources */,
 				5568E9851B5191A600D3A6E7 /* cloud.obj in Resources */,
 				5568E99F1B5191B000D3A6E7 /* platform2.obj in Resources */,
+				895A951C1B51C8DE00F55058 /* bboy_2.mtl in Resources */,
 				559A0CCF1B50A0BA005293D1 /* 6.mtl in Resources */,
 				5568E9891B5191A600D3A6E7 /* heart.obj in Resources */,
 				559A0CCB1B50A0BA005293D1 /* 4.mtl in Resources */,
+				895A95221B51C8DE00F55058 /* bboy_3.obj in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
+				895A95301B52007700F55058 /* bboy_nosmile.mtl in Resources */,
 				5568E9861B5191A600D3A6E7 /* flower.mtl in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				559A0CC61B50A0BA005293D1 /* 1.obj in Resources */,
@@ -918,15 +971,19 @@
 				559A0CCC1B50A0BA005293D1 /* 4.obj in Resources */,
 				5568E9AA1B5191B000D3A6E7 /* tree.mtl in Resources */,
 				556A40C41B50265100A39E57 /* 5x5-2.tmx in Resources */,
+				895A952C1B51F8B200F55058 /* Horizon.mp3 in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				559A0CCE1B50A0BA005293D1 /* 5.obj in Resources */,
 				895A94ED1B51A7B700F55058 /* Evenflow.mp3 in Resources */,
 				556A40D21B50265100A39E57 /* IndexColor.png in Resources */,
+				895A951E1B51C8DE00F55058 /* bboy_2.obj in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
+				895A95241B51C8DE00F55058 /* bboy_4.mtl in Resources */,
 				559A0CC91B50A0BA005293D1 /* 3.mtl in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				EC7D87181B519E6900EF37CC /* makeyourlife.png in Resources */,
+				895A95181B51C8DE00F55058 /* bboy_1.mtl in Resources */,
 				5568E9A81B5191B000D3A6E7 /* sun.mtl in Resources */,
 				5568E9AB1B5191B000D3A6E7 /* tree.obj in Resources */,
 				5568E9A41B5191B000D3A6E7 /* platform5.mtl in Resources */,
@@ -943,11 +1000,14 @@
 				895A94E81B51A7A800F55058 /* girl.mtl in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
+				895A951A1B51C8DE00F55058 /* bboy_1.obj in Resources */,
+				895A95261B51C8DE00F55058 /* bboy_4.obj in Resources */,
 				5568E9841B5191A600D3A6E7 /* cloud.mtl in Resources */,
 				895A94E61B51A7A800F55058 /* bboy.obj in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				556A40D01B50265100A39E57 /* outLine.vert in Resources */,
 				556A40D11B50265100A39E57 /* colorlist.png in Resources */,
+				895A95201B51C8DE00F55058 /* bboy_3.mtl in Resources */,
 				559A0CF41B50C493005293D1 /* starfield.plist in Resources */,
 				556A40C31B50265100A39E57 /* 5x5-1.tmx in Resources */,
 				5568E9A71B5191B000D3A6E7 /* platform6.obj in Resources */,
@@ -963,11 +1023,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC7D87231B51AF9700EF37CC /* start.mp3 in Resources */,
+				895A95191B51C8DE00F55058 /* bboy_1.mtl in Resources */,
 				EC7D871E1B51AF3800EF37CC /* life.mp3 in Resources */,
 				EC7D87191B519F6B00EF37CC /* makeyourlife.png in Resources */,
 				5568E9AF1B5191D000D3A6E7 /* platform1.mtl in Resources */,
 				5568E9B01B5191D000D3A6E7 /* platform1.obj in Resources */,
 				5568E9B11B5191D000D3A6E7 /* platform2.mtl in Resources */,
+				895A951B1B51C8DE00F55058 /* bboy_1.obj in Resources */,
 				5568E9B21B5191D000D3A6E7 /* platform2.obj in Resources */,
 				5568E9B31B5191D000D3A6E7 /* platform3.mtl in Resources */,
 				5568E9B41B5191D000D3A6E7 /* platform3.obj in Resources */,
@@ -983,30 +1045,39 @@
 				5568E9BD1B5191D000D3A6E7 /* tree.mtl in Resources */,
 				5568E9BE1B5191D000D3A6E7 /* tree.obj in Resources */,
 				5568E9BF1B5191D000D3A6E7 /* cloud.mtl in Resources */,
+				895A95311B52007700F55058 /* bboy_nosmile.mtl in Resources */,
 				5568E9C01B5191D000D3A6E7 /* cloud.obj in Resources */,
 				5568E9C11B5191D000D3A6E7 /* flower.mtl in Resources */,
 				5568E9C21B5191D000D3A6E7 /* flower.obj in Resources */,
+				895A951F1B51C8DE00F55058 /* bboy_2.obj in Resources */,
 				895A94E91B51A7A800F55058 /* girl.mtl in Resources */,
 				5568E9C31B5191D000D3A6E7 /* heart.mtl in Resources */,
 				5568E9C41B5191D000D3A6E7 /* heart.obj in Resources */,
 				5568E9C51B5191D000D3A6E7 /* house.mtl in Resources */,
 				5568E9C61B5191D000D3A6E7 /* house.obj in Resources */,
+				895A95251B51C8DE00F55058 /* bboy_4.mtl in Resources */,
 				EC7D87111B515E1300EF37CC /* colorful.png in Resources */,
 				EC7D87011B51405300EF37CC /* 2015.png in Resources */,
 				EC7D86FE1B5133D700EF37CC /* tinyflare.png in Resources */,
 				EC7D86FB1B512B1700EF37CC /* indiace.png in Resources */,
 				895A94EE1B51A7B700F55058 /* Evenflow.mp3 in Resources */,
+				895A95331B52007700F55058 /* bboy_nosmile.obj in Resources */,
+				895A951D1B51C8DE00F55058 /* bboy_2.mtl in Resources */,
 				559A0CF51B50C4A1005293D1 /* starfield.plist in Resources */,
 				559A0CD11B50A0E2005293D1 /* 1.mtl in Resources */,
 				559A0CD21B50A0E2005293D1 /* 1.obj in Resources */,
 				559A0CD31B50A0E2005293D1 /* 2.mtl in Resources */,
 				559A0CD41B50A0E2005293D1 /* 2.obj in Resources */,
+				895A95211B51C8DE00F55058 /* bboy_3.mtl in Resources */,
 				559A0CD51B50A0E2005293D1 /* 3.mtl in Resources */,
 				559A0CD61B50A0E2005293D1 /* 3.obj in Resources */,
 				559A0CD71B50A0E2005293D1 /* 4.mtl in Resources */,
 				559A0CD81B50A0E2005293D1 /* 4.obj in Resources */,
 				559A0CD91B50A0E2005293D1 /* 5.mtl in Resources */,
 				559A0CDA1B50A0E2005293D1 /* 5.obj in Resources */,
+				895A95231B51C8DE00F55058 /* bboy_3.obj in Resources */,
+				895A95271B51C8DE00F55058 /* bboy_4.obj in Resources */,
+				895A952A1B51F84100F55058 /* Lightontheland.mp3 in Resources */,
 				559A0CDB1B50A0E2005293D1 /* 6.mtl in Resources */,
 				559A0CDC1B50A0E2005293D1 /* 6.obj in Resources */,
 				895A94E71B51A7A800F55058 /* bboy.obj in Resources */,
@@ -1024,6 +1095,7 @@
 				556A40E61B50267300A39E57 /* 5x5-5.tmx in Resources */,
 				556A40E71B50267300A39E57 /* 5x5-6.tmx in Resources */,
 				895A94DF1B51A79000F55058 /* FZXIANGSU12.TTF in Resources */,
+				895A952D1B51F8B200F55058 /* Horizon.mp3 in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

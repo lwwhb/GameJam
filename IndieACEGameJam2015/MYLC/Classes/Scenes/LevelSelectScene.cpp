@@ -140,7 +140,7 @@ bool LevelSelectScene::init()
             texts.push_back("为什么我却感觉失落");
             texts.push_back("为什么？");
             texts.push_back("“我”拥有“世界”");
-            texts.push_back("“世界”有了”色彩“");
+            texts.push_back("“世界”有了“色彩”");
             texts.push_back("一定还有什么，我没找到的");
             texts.push_back("我要再去那里寻找");
             texts.push_back("寻找，直到找到为止");
