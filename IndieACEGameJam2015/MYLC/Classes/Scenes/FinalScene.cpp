@@ -127,7 +127,7 @@ bool FinalScene::init()
     EaseSineIn* rotateBy5 = EaseSineIn::create(RotateBy::create(1.0f, Vec3(-2,2,0)));
     EaseSineOut* rotateBy6 = EaseSineOut::create(RotateBy::create(1.0f, Vec3(2,-2,-0)));
     
-    Sequence* sequence = Sequence::create(rotateBy1, rotateBy6, rotateBy3, rotateBy4, rotateBy5, rotateBy2, NULL);
+    Sequence* sequence = Sequence::create(rotateBy3, rotateBy4, rotateBy1, rotateBy6, rotateBy5, rotateBy2, NULL);
     RepeatForever* repeat = RepeatForever::create(sequence);
     m_pSun->runAction(repeat);
     
