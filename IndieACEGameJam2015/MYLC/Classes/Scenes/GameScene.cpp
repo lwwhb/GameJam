@@ -90,7 +90,7 @@ bool GameScene::init()
         case 3:
             texts.clear();
             texts.push_back("我现在很平静");
-            texts.push_back("思维也很清晰“");
+            texts.push_back("思维也很清晰");
             texts.push_back("似乎这个世界的规则很简单");
             texts.push_back("…………我明白了…………");
             texts.push_back("“世界”诞生了");

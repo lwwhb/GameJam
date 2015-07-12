@@ -378,12 +378,13 @@ void LevelSelectScene::beginSelect()
                 if(m_pFront)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pFront->getRadius()*2+2, m_pFront->getRadius()*2));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pFront->getRadius()*2+2, m_pFront->getRadius()*2));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
                     m_pFront->runAction(sequnce);
+                    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("stoneroll.wav");
                 }
             }
             break;
@@ -392,22 +393,24 @@ void LevelSelectScene::beginSelect()
                 if(m_pFront)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pFront->getRadius()*2+2, m_pFront->getRadius()*2));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pFront->getRadius()*2+2, m_pFront->getRadius()*2));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
                     m_pFront->runAction(sequnce);
+                    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("stoneroll.wav");
                 }
                 if(m_pTop)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pTop->getRadius()*4+2, 0));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pTop->getRadius()*4+2, 0));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
                     m_pTop->runAction(sequnce);
+                    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("stoneroll.wav");
                 }
             }
             break;
@@ -416,8 +419,8 @@ void LevelSelectScene::beginSelect()
                 if(m_pFront)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pFront->getRadius()*2+2, m_pFront->getRadius()*2));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pFront->getRadius()*2+2, m_pFront->getRadius()*2));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
@@ -426,8 +429,8 @@ void LevelSelectScene::beginSelect()
                 if(m_pTop)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pTop->getRadius()*4+2, 0));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pTop->getRadius()*4+2, 0));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
@@ -436,12 +439,13 @@ void LevelSelectScene::beginSelect()
                 if(m_pRight)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(0, 0, 180)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(m_pRight->getRadius()*24, m_pRight->getRadius()*24+2, 0));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(0, 0, 180)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(m_pRight->getRadius()*24, m_pRight->getRadius()*24+2, 0));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
                     m_pRight->runAction(sequnce);
+                    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("stoneroll.wav");
                 }
             }
             break;
@@ -450,8 +454,8 @@ void LevelSelectScene::beginSelect()
                 if(m_pFront)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pFront->getRadius()*2+2, m_pFront->getRadius()*2));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pFront->getRadius()*2+2, m_pFront->getRadius()*2));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
@@ -460,8 +464,8 @@ void LevelSelectScene::beginSelect()
                 if(m_pTop)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pTop->getRadius()*4+2, 0));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pTop->getRadius()*4+2, 0));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
@@ -470,8 +474,8 @@ void LevelSelectScene::beginSelect()
                 if(m_pRight)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(0, 0, 180)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(m_pRight->getRadius()*24, m_pRight->getRadius()*24+2, 0));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(0, 0, 180)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(m_pRight->getRadius()*24, m_pRight->getRadius()*24+2, 0));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
@@ -480,12 +484,13 @@ void LevelSelectScene::beginSelect()
                 if(m_pBack)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(-180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pBack->getRadius()*2+2, -m_pBack->getRadius()*2));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(-180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pBack->getRadius()*2+2, -m_pBack->getRadius()*2));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
                     m_pBack->runAction(sequnce);
+                    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("stoneroll.wav");
                 }
             }
             break;
@@ -494,8 +499,8 @@ void LevelSelectScene::beginSelect()
                 if(m_pFront)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pFront->getRadius()*2+2, m_pFront->getRadius()*2));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pFront->getRadius()*2+2, m_pFront->getRadius()*2));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
@@ -504,8 +509,8 @@ void LevelSelectScene::beginSelect()
                 if(m_pTop)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pTop->getRadius()*4+2, 0));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pTop->getRadius()*4+2, 0));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
@@ -514,8 +519,8 @@ void LevelSelectScene::beginSelect()
                 if(m_pRight)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(0, 0, 180)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(m_pRight->getRadius()*24, m_pRight->getRadius()*24+2, 0));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(0, 0, 180)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(m_pRight->getRadius()*24, m_pRight->getRadius()*24+2, 0));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
@@ -524,8 +529,8 @@ void LevelSelectScene::beginSelect()
                 if(m_pBack)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(-180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pBack->getRadius()*2+2, -m_pBack->getRadius()*2));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(-180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pBack->getRadius()*2+2, -m_pBack->getRadius()*2));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
@@ -534,12 +539,13 @@ void LevelSelectScene::beginSelect()
                 if(m_pLeft)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(0, 0, -180)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(-m_pRight->getRadius()*24, m_pRight->getRadius()*24+2, 0));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(0, 0, -180)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(-m_pRight->getRadius()*24, m_pRight->getRadius()*24+2, 0));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
                     m_pLeft->runAction(sequnce);
+                    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("stoneroll.wav");
                 }
             }
             break;
@@ -548,8 +554,8 @@ void LevelSelectScene::beginSelect()
                 if(m_pFront)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pFront->getRadius()*2+2, m_pFront->getRadius()*2));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pFront->getRadius()*2+2, m_pFront->getRadius()*2));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
@@ -558,8 +564,8 @@ void LevelSelectScene::beginSelect()
                 if(m_pTop)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pTop->getRadius()*4+2, 0));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pTop->getRadius()*4+2, 0));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
@@ -578,8 +584,8 @@ void LevelSelectScene::beginSelect()
                 if(m_pBack)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(-180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, m_pBack->getRadius()*2+2, -m_pBack->getRadius()*2));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(-180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, m_pBack->getRadius()*2+2, -m_pBack->getRadius()*2));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
@@ -588,8 +594,8 @@ void LevelSelectScene::beginSelect()
                 if(m_pLeft)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(0, 0, -180)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(-m_pRight->getRadius()*24, m_pRight->getRadius()*24+2, 0));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(0, 0, -180)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(-m_pRight->getRadius()*24, m_pRight->getRadius()*24+2, 0));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
@@ -599,12 +605,13 @@ void LevelSelectScene::beginSelect()
                 if(m_pDown)
                 {
                     m_bTouchEnable = false;
-                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(1.0f, Vec3(-180, 0, 0)));
-                    MoveTo* moveTo = MoveTo::create(1.0f, Vec3(0, 2, 0));
+                    EaseSineIn* rotateTo = EaseSineIn::create(RotateTo::create(2.0f, Vec3(-180, 0, 0)));
+                    MoveTo* moveTo = MoveTo::create(2.0f, Vec3(0, 2, 0));
                     Spawn* spawn = Spawn::createWithTwoActions(moveTo, rotateTo);
                     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(LevelSelectScene::enableTouch, this));
                     Sequence* sequnce = Sequence::createWithTwoActions(spawn, callFunc);
                     m_pDown->runAction(sequnce);
+                    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("stoneroll.wav");
                 }
 
             }
@@ -615,6 +622,7 @@ void LevelSelectScene::beginGame()
 {
     if(m_nCurrentLevel < 7)
     {
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("stoneroll.wav");
         if(m_pCube)
         {
             m_pCube->stopAllActions();
