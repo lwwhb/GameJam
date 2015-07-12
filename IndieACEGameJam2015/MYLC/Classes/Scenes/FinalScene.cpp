@@ -62,7 +62,7 @@ bool FinalScene::init()
     }
     
     SimpleAudioEngine::getInstance()->stopBackgroundMusic();
-    SimpleAudioEngine::getInstance()->playBackgroundMusic("Horizon.mp3",true);
+    SimpleAudioEngine::getInstance()->playBackgroundMusic("horizon.mp3",true);
     
     auto la = Label::createWithTTF("", "FZXIANGSU12.TTF", 24);
     la->setString("");

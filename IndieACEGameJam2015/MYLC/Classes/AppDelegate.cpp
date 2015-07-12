@@ -69,13 +69,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // create a scene. it's an autorelease object
 
     auto scene = LogoScene::createScene();
-    SimpleAudioEngine::getInstance()->preloadBackgroundMusic("Evenflow.mp3");
-    SimpleAudioEngine::getInstance()->playBackgroundMusic("Evenflow.mp3",true);
+    SimpleAudioEngine::getInstance()->preloadBackgroundMusic("evenflow.mp3");
+    SimpleAudioEngine::getInstance()->preloadBackgroundMusic("horizon.mp3");
+    SimpleAudioEngine::getInstance()->playBackgroundMusic("evenflow.mp3",true);
     SimpleAudioEngine::getInstance()->preloadEffect("life.mp3");
     SimpleAudioEngine::getInstance()->preloadEffect("start.mp3");
-
-    SimpleAudioEngine::getInstance()->preloadBackgroundMusic("Horizon.mp3");
-    
+    SimpleAudioEngine::getInstance()->preloadEffect("stoneroll.wav");
+    SimpleAudioEngine::getInstance()->preloadEffect("stoneflip.wav");
     SimpleAudioEngine::getInstance()->setEffectsVolume(0.5);
     // run
     director->runWithScene(scene);
