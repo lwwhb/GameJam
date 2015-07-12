@@ -108,7 +108,7 @@ void MenuScene::makeyourEnd()
 void MenuScene::colorfulEnd()
 {
     
-    auto touchLabel = Label::createWithTTF("请触摸开始游戏", "FZXIANGSU12.TTF", 20);
+    auto touchLabel = Label::createWithTTF("请点击开始游戏", "FZXIANGSU12.TTF", 20);
     touchLabel->setPosition(size.width/2,100);
     this->addChild(touchLabel);
     auto touchFadeToaAction = FadeTo::create(0.7,10);

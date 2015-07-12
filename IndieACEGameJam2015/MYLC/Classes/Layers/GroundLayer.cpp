@@ -9,6 +9,7 @@
 #include "GroundLayer.h"
 #include "UtilityHelper.h"
 #include "GroundLayer.h"
+#include "SimpleAudioEngine.h"
 USING_NS_CC;
 
 GroundLayer* GroundLayer::create(const std::string& tmxFile)
@@ -443,6 +444,7 @@ void GroundLayer::checkWinOrLose()
             CallFunc* callFunc1 = CallFunc::create(CC_CALLBACK_0(GameScene::winText,m_pGameScene));
             Sequence* sequence = Sequence::create(callFunc1,scaleTo, delay, callFunc, NULL);
             m_pGift->runAction(sequence);
+            CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("life.mp3");
         }
     }
     else
@@ -472,6 +474,7 @@ void GroundLayer::onTouchesBegan(const std::vector<Touch*>& touches, Event *even
                 {
                     if(ray.intersects(cell->getAABB()) && cell->getType() == GroundCell::CT_NOT)
                     {
+                        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("stoneflip.wav");
                         m_pCurrentCell = cell;
                         RotateTo* ratateTo = RotateTo::create(0.5f, Vec3(-180,0,0));
                         MoveTo* moveTo = MoveTo::create(0.5f, Vec3(cell->getPositionX(), 2, cell->getPositionZ()));
@@ -618,15 +621,19 @@ void GroundLayer::onExitIdle()
 }
 void GroundLayer::onExitMoveLeft()
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("stoneflip.wav");
 }
 void GroundLayer::onExitMoveRight()
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("stoneflip.wav");
 }
 void GroundLayer::onExitMoveUp()
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("stoneflip.wav");
 }
 void GroundLayer::onExitMoveDown()
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("stoneflip.wav");
 }
 void GroundLayer::onExitCheckNextCell()
 {
